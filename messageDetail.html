@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的收藏</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/sliderx.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/HappyImage.min.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <script src="./js/Sliding_Validation_Gu.js" type="text/javascript"></script>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+<div class="messageDetail">
+    <div id="headerBox"></div>
+    <div class="messageDetail_main banxin" id="messageBox"></div>
+    <div id="footerBox"></div>
+</div>
+</body>
+
+<script id="message" type="text/html">
+    {{if data}}
+    <h4>{{data.title}}</h4>
+    <h5>创建时间：{{data.createTime}}</h5>
+    <img src="{{data.pic}}" alt="">
+    <p>{{#data.remark}}</p>
+    {{/if}}
+</script>
+
+<script>
+    var newsId = getQueryString("newsId");
+    $(function () {
+        $('#headerBox').load('common/header.html');
+        $('#footerBox').load('common/footer.html');
+
+        $.ajax({
+            url: "http://api.cc04u.cc/queryZixunInfo?id=" + newsId,
+            success: function (res) {
+                res.data.createTime = timestampToTime(res.data.createTime)
+                var items = template("message", res);
+                $("#messageBox").html(items)
+            }
+        })
+    })
+
+    function timestampToTime(timestamp) {
+        var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        var D = date.getDate() + ' ';
+        var h = date.getHours() + ':';
+        var m = date.getMinutes() + ':';
+        var s = date.getSeconds();
+        return Y+M+D+h+m+s;
+    }
+</script>
+</html>

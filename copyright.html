@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>版权登记</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/HappyImage.min.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <script src="./js/Sliding_Validation_Gu.js" type="text/javascript"></script>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+<div class="copyright">
+    <div id="headerBox"></div>
+    <div class="copyright_main banxin">
+        <h2>作品登记证书&nbsp; &nbsp;版权局官方认证</h2>
+        <div class="certificate clearfix">
+            <div class="fl imgBox">
+                <img src="./image/copy/certificate.png" alt="">
+                <h4>电子证书样本</h4>
+                <p>( 默认只有电子证书 )</p>
+            </div>
+            <ul class="fl btn">
+                <li><a href="#meal">购买套餐</a></li>
+                <li><a href="./registerAtOnce.html">立即登记</a></li>
+                <li><a href="./registerList.html">等级列表</a></li>
+            </ul>
+        </div>
+        <ul class="copyList">
+            <li>
+                <div class="copyTitle rela">
+                    版权登记作品类型
+                    <span class="abso"></span>
+                </div>
+                <p class="letter">LOGO、卡通形象、插画、字体、平面、网页、摄影作品、设计图、示意图、模型</p>
+            </li>
+            <li id="meal">
+                <div class="copyTitle rela">
+                    版权登记与存证服务套餐
+                    <span class="abso"></span>
+                </div>
+                <ul class="comboList">
+                    <li>
+                        <p><b>版权登记：</b>版权保护中心登记证书</p>
+                    </li>
+                    <li>
+                        <p class="clearfix">
+                            <b class="fl">服务内容：</b>
+                            <span class="fl">版权自助登记<br>版权局发证、全国有效，预计7格工作日取证</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>价格：</b>60/件</p>
+                    </li>
+                    <li>
+                        <p class="clearfix">
+                            <b class="fl">购买数量：</b>
+                            <span class="gw_num fl">
+                                <em class="jian">-</em>
+                                <input type="text" value="1" class="num"/>
+                                <em class="add">+</em>
+                            </span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="buyBtn">立即购买</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="copyTitle rela">
+                    作品登记证书申请流程
+                    <span class="abso"></span>
+                </div>
+                <ul class="application clearfix">
+                    <li><span>1</span>实名认证</li>
+                    <li><span>2</span>作品登记</li>
+                    <li><span>3</span>兮兮灵初审</li>
+                    <li><span>4</span>版权局审核</li>
+                    <li><span>5</span>颁发证书</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="footerBox"></div>
+</div>
+</body>
+<script>
+    $(function () {
+        $('#headerBox').load('common/header.html');
+        $('#footerBox').load('common/footer.html');
+
+    })
+</script>
+</html>

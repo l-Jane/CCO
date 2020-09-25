@@ -1,0 +1,102 @@
+/*初始化*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px "Microsoft YaHei";
+  background: #fff;
+  font-family: '微软雅黑';
+}
+
+input, button,textarea{
+  border: none;
+  user-select: text;
+  outline:none;
+}
+select {
+  outline: none;
+}
+
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder{
+  color: #c4c5c6;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+ul,li,ol {
+  list-style: none;
+}
+
+/*公共样式*/
+.banxin {
+  width: 1000px;
+  margin: 0 auto;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+.rela {
+  position: relative;
+}
+.abso {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  height: 0;
+}
+.ell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shadow {
+  box-shadow: 0 0.27vw 1.8vw rgba(0, 0, 0, 0.3), inset 0 0 1.34vw #f9f2e9;
+}
+.fenge {
+  width: 100vw;
+  height: 2.67vw;
+  background: #f7f7f7;
+}
+.none {
+  display: none!important;
+}
+
+
+.layui-layer-title {
+  height: 0!important;
+  border: none!important;
+}
+.layui-layer-content, .layui-layer.layui-layer-page {
+  border-radius: 10px!important;
+  height: auto!important;
+}

@@ -1,0 +1,2653 @@
+.home .home_main {
+  margin-bottom: 150px;
+}
+.home .home_main .imgBox {
+  width: 100%;
+}
+.home .home_main .imgBox li {
+  width: 100%;
+  position: relative;
+}
+.home .home_main .imgBox li .title {
+  width: 360px;
+  height: 25px;
+  margin: 60px auto 0 auto;
+  position: relative;
+}
+.home .home_main .imgBox li .title .titleLine {
+  width: 100%;
+  height: 1px;
+  background: #343434;
+}
+.home .home_main .imgBox li .title h3 {
+  position: absolute;
+  font-size: 17px;
+  font-weight: 400;
+  color: #343434;
+  letter-spacing: 1px;
+  background: #fff;
+  padding: 0 20px;
+  left: 50%;
+  top: -52%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+.home .home_main .imgBox li .title h3 img {
+  width: 18px;
+  height: 24px;
+  vertical-align: -5px;
+  margin-right: 8px;
+}
+.home .home_main .imgBox li .imgFireBox {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.home .home_main .imgBox li .imgFireBox img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.album .album_main {
+  padding-bottom: 100px;
+}
+.album .album_main .imgTypeTitle {
+  height: 90px;
+  line-height: 115px;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+.album .album_main .imgTypeTitle .typeImg {
+  width: 18px;
+  height: 10px;
+  display: inline-block;
+  background: url("../image/album/more.png") no-repeat center;
+  background-size: 20px 12px;
+  margin-left: 2px;
+  vertical-align: 2px;
+}
+.album .album_main .imgTypeTitle:hover {
+  color: #FE8F19;
+}
+.album .album_main .imgTypeTitle:hover .typeImg {
+  background: url("../image/album/imore.png") no-repeat center;
+  background-size: 20px 12px;
+}
+.themeDetail .themeDetail_main {
+  padding-bottom: 200px;
+  text-align: center;
+}
+.themeDetail .themeDetail_main > h4 {
+  height: 75px;
+  line-height: 95px;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+.themeDetail .themeDetail_main h4:hover {
+  color: #FE8F19;
+}
+.typeDetail .typeDetail_main {
+  padding-bottom: 30px;
+}
+.typeDetail .typeDetail_main > h4 {
+  height: 65px;
+  line-height: 90px;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+.typeDetail .typeDetail_main > p {
+  font-size: 12px;
+  color: #7D7D7D;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.imgDetail .imgDetail_main {
+  padding: 20px 0 100px 0;
+}
+.imgDetail .imgDetail_main .imgMain {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.imgDetail .imgDetail_main .imgMain > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  bottom: 0;
+  padding: 12px 20px 15px 20px;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .imgBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .imgBox > div {
+  margin-right: 20px;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .imgBox .good {
+  width: 18px;
+  height: 18px;
+  background: url("../image/imgs/good.png") no-repeat center;
+  background-size: 18px 18px;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .imgBox .good.act {
+  background: url("../image/imgs/igood.png") no-repeat center;
+  background-size: 18px 18px;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .imgBox .collect {
+  width: 18px;
+  height: 18px;
+  background: url("../image/imgs/collect.png") no-repeat center;
+  background-size: 18px 18px;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .imgBox .collect.act {
+  background: url("../image/imgs/icollect.png") no-repeat center;
+  background-size: 18px 18px;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .imgBox img.down {
+  width: 65px;
+  height: 48px;
+  display: block;
+  margin-left: 8px;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .briefBox {
+  text-align: right;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .briefBox h4 {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 40px;
+}
+.imgDetail .imgDetail_main .imgMain .imgDetailBox .briefBox p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}
+.imgDetail .imgDetail_main .cateList {
+  width: 100%;
+  margin: 20px 0;
+}
+.imgDetail .imgDetail_main .cateList li {
+  float: left;
+  padding: 0 6px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+.imgDetail .imgDetail_main .cateList li a {
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  font-size: 13px;
+  color: #333333;
+}
+.imgDetail .imgDetail_main .cateList li:hover {
+  border-color: #FE8F19;
+}
+.imgDetail .imgDetail_main .cateList li:hover a {
+  color: #FE8F19;
+}
+.imgDetail .imgDetail_main .remmentBox {
+  width: calc(100% - 120px);
+  margin: 25px 60px 0 60px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 25px;
+}
+.imgDetail .imgDetail_main .remmentBox img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.imgDetail .imgDetail_main .remmentBox .remmentBox_main {
+  width: calc(100% - 60px);
+}
+.imgDetail .imgDetail_main .remmentBox .remmentBox_main textarea {
+  width: 100%;
+  height: 75px;
+  background: #F4F4F4;
+  resize: none;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  padding: 8px 13px;
+  font-size: 13px;
+  color: #333;
+}
+.imgDetail .imgDetail_main .remmentBox .remmentBox_main textarea::placeholder {
+  font-size: 13px;
+  color: #999999;
+}
+.imgDetail .imgDetail_main .remmentBox .remmentBox_main button {
+  float: right;
+  padding: 2px 18px;
+  border-radius: 2px;
+  background: #FE8F19;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.imgDetail .imgDetail_main .loginedRemmentBox {
+  display: none;
+}
+.imgDetail .imgDetail_main .remmentList {
+  width: calc(100% - 120px);
+  margin: 0 100px 0 20px;
+}
+.imgDetail .imgDetail_main .remmentList > h4 {
+  font-size: 13px;
+  line-height: 50px;
+  font-weight: 400;
+  color: #333333;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li {
+  width: calc(100% - 60px);
+  margin: 0 20px 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #DDDDDD;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li .liBox {
+  width: calc(100% - 55px);
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li .liBox h4 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333333;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li .liBox p.content {
+  font-size: 12px;
+  line-height: 35px;
+  color: #666666;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li .liBox p.time {
+  font-size: 12px;
+  color: #999999;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li:hover .liBox h4 {
+  color: #FE8F19;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.imgDetail .imgDetail_main .remmentList .remmentList_main li:nth-last-child(1) .liBox {
+  border-bottom: none;
+}
+.design .design_main {
+  padding-bottom: 60px;
+}
+.design .design_main > h4 {
+  height: 65px;
+  line-height: 90px;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+.design .design_main > p {
+  font-size: 12px;
+  color: #7D7D7D;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.designDetail .designDetail_main {
+  padding: 20px 0 60px 0;
+}
+.designDetail .designDetail_main .imgMain {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.designDetail .designDetail_main .imgMain > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  bottom: 0;
+  padding: 12px 20px 15px 20px;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .imgBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .imgBox > div {
+  margin-right: 20px;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .imgBox .good {
+  width: 18px;
+  height: 18px;
+  background: url("../image/imgs/good.png") no-repeat center;
+  background-size: 18px 18px;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .imgBox .good.act {
+  background: url("../image/imgs/igood.png") no-repeat center;
+  background-size: 18px 18px;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .imgBox .collect {
+  width: 18px;
+  height: 18px;
+  background: url("../image/imgs/collect.png") no-repeat center;
+  background-size: 18px 18px;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .imgBox .collect.act {
+  background: url("../image/imgs/icollect.png") no-repeat center;
+  background-size: 18px 18px;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .briefBox {
+  text-align: right;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .briefBox h4 {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .briefBox p {
+  font-size: 12px;
+  color: #fff;
+}
+.designDetail .designDetail_main .imgMain .imgDetailBox .briefBox p.time {
+  margin: 6px 0;
+}
+.designDetail .designDetail_main .cateList {
+  width: 100%;
+  margin: 20px 0;
+}
+.designDetail .designDetail_main .cateList li {
+  float: left;
+  padding: 0 6px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+.designDetail .designDetail_main .cateList li a {
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  font-size: 13px;
+  color: #333333;
+}
+.designDetail .designDetail_main .cateList li:hover {
+  border-color: #FE8F19;
+}
+.designDetail .designDetail_main .cateList li:hover a {
+  color: #FE8F19;
+}
+.designDetail .designDetail_main .remmentBox {
+  width: calc(100% - 120px);
+  margin: 25px 60px 0 60px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 25px;
+}
+.designDetail .designDetail_main .remmentBox img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.designDetail .designDetail_main .remmentBox .remmentBox_main {
+  width: calc(100% - 60px);
+}
+.designDetail .designDetail_main .remmentBox .remmentBox_main textarea {
+  width: 100%;
+  height: 75px;
+  background: #F4F4F4;
+  resize: none;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  padding: 8px 13px;
+  font-size: 13px;
+  color: #333;
+}
+.designDetail .designDetail_main .remmentBox .remmentBox_main textarea::placeholder {
+  font-size: 13px;
+  color: #999999;
+}
+.designDetail .designDetail_main .remmentBox .remmentBox_main button {
+  float: right;
+  padding: 2px 18px;
+  border-radius: 2px;
+  background: #FE8F19;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.designDetail .designDetail_main .loginedRemmentBox {
+  display: none;
+}
+.designDetail .designDetail_main .remmentList {
+  width: calc(100% - 120px);
+  margin: 0 100px 0 20px;
+}
+.designDetail .designDetail_main .remmentList > h4 {
+  font-size: 13px;
+  line-height: 50px;
+  font-weight: 400;
+  color: #333333;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li {
+  width: calc(100% - 60px);
+  margin: 0 20px 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #DDDDDD;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li .liBox {
+  width: calc(100% - 55px);
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li .liBox h4 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333333;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li .liBox p.content {
+  font-size: 12px;
+  line-height: 35px;
+  color: #666666;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li .liBox p.time {
+  font-size: 12px;
+  color: #999999;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li:hover .liBox h4 {
+  color: #FE8F19;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.designDetail .designDetail_main .remmentList .remmentList_main li:nth-last-child(1) .liBox {
+  border-bottom: none;
+}
+.designDetail .logined .remmentBox {
+  display: none;
+}
+.designDetail .logined .loginedRemmentBox {
+  width: calc(100% - 60px);
+  background: #F4F4F4;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 12px;
+  color: #333333;
+  padding: 15px 0;
+}
+.designDetail .logined .loginedRemmentBox span {
+  display: inline-block;
+  padding: 2px 18px;
+  border-radius: 2px;
+  background: #FE8F19;
+  color: #fff;
+  font-size: 12px;
+  margin-right: 3px;
+}
+.copyright .copyright_main {
+  padding-bottom: 60px;
+}
+.copyright .copyright_main h2 {
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0 40px 0;
+  color: #333;
+}
+.copyright .copyright_main .certificate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.copyright .copyright_main .certificate .imgBox {
+  width: 245px;
+  text-align: center;
+  margin-right: 100px;
+}
+.copyright .copyright_main .certificate .imgBox img {
+  width: 100%;
+  height: 190px;
+  display: block;
+}
+.copyright .copyright_main .certificate .imgBox h4 {
+  color: #333333;
+  font-size: 14px;
+  margin: 12px 0 2px 0;
+}
+.copyright .copyright_main .certificate .imgBox p {
+  color: #999999;
+  font-size: 13px;
+  font-weight: 300;
+}
+.copyright .copyright_main .certificate .btn {
+  width: 160px;
+  height: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.copyright .copyright_main .certificate .btn li {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  background: #FE8F19;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.copyright .copyright_main .certificate .btn li a {
+  font-size: 15px;
+  color: #fff;
+}
+.copyright .copyright_main .certificate .btn li:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.copyright .copyright_main .copyList {
+  width: 100%;
+  padding-top: 20px;
+}
+.copyright .copyright_main .copyList > li {
+  color: #333;
+  margin-top: 35px;
+}
+.copyright .copyright_main .copyList > li .copyTitle {
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+}
+.copyright .copyright_main .copyList > li .copyTitle span {
+  width: 100%;
+  height: 4px;
+  background: #FE8F19;
+  left: 0;
+  bottom: 3px;
+  opacity: 0.6;
+}
+.copyright .copyright_main .copyList > li p {
+  margin-top: 16px;
+}
+.copyright .copyright_main .copyList > li p.letter {
+  margin-left: 40px;
+  color: #666666;
+  font-size: 13px;
+}
+.copyright .copyright_main .copyList > li .comboList {
+  padding-top: 5px;
+}
+.copyright .copyright_main .copyList > li .comboList p {
+  font-size: 13px;
+  line-height: 24px;
+  margin-top: 10px;
+  color: #999999;
+}
+.copyright .copyright_main .copyList > li .comboList p b {
+  width: 185px;
+  text-align: right;
+  display: inline-block;
+  font-weight: 400;
+  margin-right: 6px;
+  color: #333333;
+}
+.copyright .copyright_main .copyList > li .comboList p span {
+  display: block;
+}
+.copyright .copyright_main .copyList > li .comboList p .gw_num {
+  display: block;
+  border: 1px solid #CCCCCC;
+  margin-left: 10px;
+}
+.copyright .copyright_main .copyList > li .comboList p .gw_num em,
+.copyright .copyright_main .copyList > li .comboList p .gw_num .num {
+  color: #ccc;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  font-style: normal;
+}
+.copyright .copyright_main .copyList > li .comboList p .gw_num em {
+  color: #fff;
+  line-height: 20px;
+  background: #CCCCCC;
+}
+.copyright .copyright_main .copyList > li .comboList p .gw_num .num {
+  width: 60px;
+}
+.copyright .copyright_main .copyList > li .comboList .buyBtn {
+  padding: 0 40px;
+  width: 160px;
+  height: 36px;
+  line-height: 36px;
+  background: #FE8F19;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 15px;
+  color: #fff;
+  margin: 30px auto 50px auto;
+}
+.copyright .copyright_main .copyList > li .application {
+  margin: 30px 0 0 40px;
+}
+.copyright .copyright_main .copyList > li .application li {
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  font-size: 12px;
+  margin-right: 30px;
+  background: url("../image/copy/gray.png") no-repeat center;
+  background-size: 130px 40px;
+  color: #fff;
+}
+.copyright .copyright_main .copyList > li .application li span {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  margin-right: 10px;
+  vertical-align: -2px;
+}
+.gameWall .gameWall_main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.gameWall .gameWall_main li {
+  width: calc((100% - 20px) / 2);
+  margin-top: 20px;
+  position: relative;
+}
+.gameWall .gameWall_main li img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+.gameWall .gameWall_main li .imgBrief {
+  width: 100%;
+  height: 90px;
+  background: url("../image/album/u859.svg") no-repeat center;
+  background-size: 104% 90px;
+  padding: 15px 18px;
+}
+.gameWall .gameWall_main li .imgBrief h5 {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #343434;
+}
+.gameWall .gameWall_main li .imgBrief p {
+  color: #9A9A9A;
+  font-size: 13px;
+  line-height: 24px;
+}
+.gameWall .gameWall_main li .imgBrief span {
+  width: 85px;
+  height: 28px;
+  line-height: 28px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  display: inline-block;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  border-radius: 20px 0 20px 0;
+}
+.gameWall .gameWall_main li .imgBrief span.zjz {
+  background: #7ED422;
+}
+.gameWall .gameWall_main li .imgBrief span.hjgs {
+  background: #FF3000;
+}
+.gameWall .gameWall_main li .imgBrief span.psz {
+  background: #FE901A;
+}
+.gameWall .gameWall_main li .imgBrief span.yjs {
+  background: #AAAAAA;
+}
+.myCollect .myCollect_main {
+  min-height: calc(100vh - 314px);
+  padding-bottom: 60px;
+}
+.myCollect .myCollect_main h4 {
+  font-size: 14px;
+  color: #9A9A9A;
+  font-weight: 300;
+  margin: 20px 0;
+}
+.person .person_main {
+  padding: 20px 0 80px 0;
+}
+.person .person_main .personBox > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.person .person_main .personBox p {
+  font-size: 15px;
+  color: #343434;
+  text-align: center;
+  margin: 15px 0 5px 0;
+}
+.person .person_main .personBox p.id {
+  font-size: 12px;
+  color: #9A9A9A;
+  margin: 0;
+}
+.person .person_main .personBox .btn {
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  background: #FE8F19;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+.person .person_main .personBox .btn:hover {
+  background: #fd8301;
+}
+.person .person_main .personBox .personBox_main {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px auto 50px auto;
+  -moz-box-shadow: 0 0 8px #CCCCCC;
+  -webkit-box-shadow: 0 0 8px #CCCCCC;
+  box-shadow: 0 0 8px #CCCCCC;
+  border-radius: 8px;
+  padding: 20px 0;
+}
+.person .person_main .personBox .personBox_main li {
+  width: calc(100% / 3);
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+.person .person_main .personBox .personBox_main li a img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.person .person_main .personBox .personBox_main li a p {
+  font-size: 16px;
+  margin: 8px 0 0 0;
+  color: #343434;
+}
+.person .person_main .personBox .personBox_main li .btnline {
+  width: 1px;
+  height: 25px;
+  background: #EEEEEE;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.uploadMine .uploadMine_main {
+  padding: 30px 0 0 30px;
+  min-height: calc(100vh - 320px);
+  overflow: auto;
+}
+.uploadMine .uploadMine_main .noData {
+  font-size: 16px!important;
+  min-height: calc(100vh - 400px) !important;
+  line-height: calc(100vh - 400px) !important;
+  text-align: center!important;
+  color: #999999 !important;
+}
+.uploadMine .uploadMine_main .windowBox .cont {
+  display: none;
+}
+.uploadMine .uploadMine_main .windowBox .cont.active {
+  display: block;
+}
+.uploadMine .uploadMine_main .windowBox .category {
+  position: relative;
+}
+.uploadMine .uploadMine_main .windowBox .category ul li {
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #9A9A9A;
+  display: inline-block;
+  margin-right: 50px;
+}
+.uploadMine .uploadMine_main .windowBox .category ul li.active {
+  font-size: 18px;
+  color: #343434;
+}
+.uploadMine .uploadMine_main .windowBox .category ul li.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #FE901A;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  opacity: 0.8;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine p.tips {
+  font-size: 13px;
+  color: #999999;
+  line-height: 60px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main {
+  margin-left: -20px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main > h4 {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main p.error {
+  font-size: 12px;
+  line-height: 45px;
+  color: #EE3F3F;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg {
+  width: 100%;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg li,
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .addImg {
+  width: calc((100% - 90px) / 3);
+  margin: 0 30px 40px 0;
+  height: 220px;
+  box-shadow: 0 0 8px #EDEDED;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  color: #999999;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 20px;
+  box-sizing: border-box;
+  float: left;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .box {
+  text-align: center;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .box input {
+  display: block;
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .box .btn {
+  width: 120px;
+  height: 28px;
+  line-height: 28px;
+  background: #FE8F19;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .box > p {
+  font-size: 12px;
+  line-height: 20px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile {
+  padding: 0 62px 0 62px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile > img.close {
+  width: 12px;
+  height: 12px;
+  right: 22px;
+  top: 12px;
+  margin: 0;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile > img {
+  width: 100%;
+  height: 115px;
+  margin-top: 8px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile h5 {
+  font-size: 14px;
+  line-height: 14px;
+  color: #333333;
+  margin: 14px 0 8px 0;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile p span {
+  color: #FE8F19;
+  float: right;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile p.finished {
+  color: #FE8F19;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile .process {
+  padding: 6px 0;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile .process .process_main {
+  width: 100%;
+  height: 8px;
+  background: #EEEEEE;
+  border-radius: 6px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .choseImg .originalFile .process .process_main span {
+  height: 100%;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  background: #FE8F19;
+  border-radius: 6px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main > button {
+  width: 220px;
+  height: 40px;
+  background: #FE8F19;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .attentionThing h6 {
+  font-weight: 400;
+  color: #333333;
+  font-size: 16px;
+  line-height: 50px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .attentionThing p {
+  font-size: 13px;
+  color: #666666;
+  line-height: 23px;
+  margin-left: 20px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .attentionThing p.tip {
+  font-size: 12px;
+  color: #333;
+  margin: 25px 0 40px 20px;
+}
+.uploadMine .uploadMine_main .windowBox .shareMine .shareMine_main .attentionThing p.tip a {
+  color: #FE8F19;
+  font-size: 12px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos.show .fillInfo {
+  display: none;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos.show .fillForm {
+  display: block;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos {
+  width: 100%;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo {
+  display: block;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo > p {
+  font-size: 13px;
+  color: #999999;
+  line-height: 50px;
+  margin-top: 5px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox .fillInfos_main {
+  width: calc((100% - 180px) / 4);
+  margin-right: 60px;
+  -moz-box-shadow: 0 0 8px #CCCCCC;
+  -webkit-box-shadow: 0 0 8px #CCCCCC;
+  box-shadow: 0 0 8px #CCCCCC;
+  border-radius: 6px;
+  padding: 12px 11px 0 11px;
+  margin-bottom: 30px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox .fillInfos_main .imgBox {
+  width: 100%;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox .fillInfos_main .imgBox .mask {
+  width: 100%;
+  height: 200px;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  border-radius: 6px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox .fillInfos_main .imgBox .mask .btn {
+  width: 142px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 6px;
+  background: #FE8F19;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox .fillInfos_main .imgBox img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  border-radius: 6px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox .fillInfos_main .imgBox > p {
+  font-size: 12px;
+  color: #333333;
+  line-height: 40px;
+  margin-top: 2px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox .fillInfos_main:nth-last-child(1),
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillInfo .fillInfoBox .fillInfos_main:nth-child(4n) {
+  margin-right: 0;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm {
+  display: none;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm > p {
+  font-size: 13px;
+  color: #999999;
+  line-height: 50px;
+  margin-top: 5px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 15px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox > img {
+  width: 170px;
+  height: 198px;
+  display: block;
+  border-radius: 8px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main {
+  width: 580px;
+  margin-left: 30px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #333333;
+  margin-bottom: 23px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li > span {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  float: left;
+  color: #333333;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm {
+  float: right;
+  width: calc(100% - 105px);
+  height: 100%;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm > p {
+  font-size: 12px;
+  color: #999999;
+  line-height: 18px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm .selector {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm .selector select {
+  height: 100%;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #999999;
+  border: 1px solid #ccc;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm .selector select:nth-child(1) {
+  width: 35%;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm .selector select:nth-child(2) {
+  width: 62%;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm input[type="text"] {
+  width: 60%;
+  height: 100%;
+  border: 1px solid #CCCCCC;
+  font-size: 16px;
+  color: #555;
+  padding-left: 10px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm input[type="text"]:focus {
+  border: 1px solid #FE8F19;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm textarea {
+  width: 90%;
+  height: 60px;
+  border: 1px solid #CCCCCC;
+  font-size: 14px;
+  color: #333;
+  padding: 15px;
+  resize: none;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .inputForm textarea:focus {
+  border: 1px solid #FE8F19;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .dateInput {
+  width: 30% !important;
+  font-size: 12px;
+  float: left !important;
+  margin-left: 15px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .dateInput input {
+  width: 100% !important;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .dateInput input::placeholder {
+  font-size: 13px;
+  color: #999;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main > li .dateInput img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm .fillFormBox .fillFormBox_main li.isrequire span::before {
+  content: "*";
+  color: #333333;
+  margin-right: 1px;
+}
+.uploadMine .uploadMine_main .windowBox .fillInfos .fillForm button {
+  width: 180px;
+  height: 35px;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 6px;
+  background: #FE8F19;
+  display: block;
+  margin: 90px auto;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal {
+  width: 100%;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal > p {
+  font-size: 13px;
+  color: #999999;
+  line-height: 50px;
+  margin-top: 5px;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main {
+  width: calc((100% - 60px) / 4);
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main .dealWindow {
+  width: 96%;
+  -moz-box-shadow: 0 0 8px #CCCCCC;
+  -webkit-box-shadow: 0 0 8px #CCCCCC;
+  box-shadow: 0 0 8px #CCCCCC;
+  border-radius: 6px;
+  padding: 12px 11px 0 11px;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main .dealWindow .imgBox {
+  width: 100%;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main .dealWindow .imgBox img {
+  width: 100%;
+  height: 240px;
+  display: block;
+  border-radius: 6px;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main .dealWindow .imgBox > p {
+  font-size: 12px;
+  color: #333333;
+  line-height: 40px;
+  margin-top: 2px;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main > p {
+  font-size: 12px;
+  color: #999;
+  margin: 12px 0;
+  padding-left: 12px;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main .dealing {
+  font-size: 13px;
+  color: #FE8F19;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main .nodeal {
+  color: #FF0000;
+}
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main:nth-last-child(1),
+.uploadMine .uploadMine_main .windowBox .toDeal .toDealBox .toDeal_main:nth-child(4n) {
+  margin-right: 0;
+}
+.uploadMine .uploadMine_main .windowBox .dealPass h4 {
+  font-size: 14px;
+  color: #999999;
+  font-weight: 300;
+  margin: 20px 0 18px 0;
+}
+.uploadMine .uploadMine_main .windowBox .dealPass h4 span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #FE8F19;
+}
+.uploadMine .uploadMine_main .windowBox .dealPass .dealPass_main {
+  margin-left: -30px;
+}
+.uploadMine #safeSetBox {
+  font-size: 12px;
+  color: #333333;
+  border: 1px solid #E5E5E5;
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  display: none;
+}
+.uploadMine #safeSetBox.act {
+  display: block;
+}
+.accountInfo .accountInfo_main .personInfos {
+  width: 100%;
+  color: #333333;
+  padding: 30px 0;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main {
+  width: 35%;
+  margin-left: 110px;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li > span {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  float: left;
+  color: #333333;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li .inputForm {
+  float: right;
+  width: calc(100% - 100px);
+  height: 100%;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li .inputForm .selector {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li .inputForm .selector select {
+  width: 46%;
+  height: 100%;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #999999;
+  border: 1px solid #ccc;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li .inputForm .sex li {
+  float: left;
+  width: 35%;
+  font-size: 14px;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li .inputForm .sex li span {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border: 1px solid #CCCCCC;
+  margin-right: 8px;
+  vertical-align: -1px;
+  border-radius: 50%;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li .inputForm .sex li.act span {
+  border: 3px solid #FE8F19;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li .inputForm input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #CCCCCC;
+  font-size: 16px;
+  color: #555;
+  padding-left: 10px;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main > li .inputForm input[type="text"]:focus {
+  border: 1px solid #FE8F19;
+}
+.accountInfo .accountInfo_main .personInfos .personInfos_main li.isrequire span::before {
+  content: "*";
+  color: #333333;
+  margin-right: 1px;
+}
+.accountInfo .accountInfo_main .personInfos button {
+  width: 20%;
+  height: 35px;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 6px;
+  background: #FE8F19;
+  display: block;
+  margin: 60px auto 40px auto;
+}
+.accountInfo .accountInfo_main .personInfos button:hover {
+  background: #fd8301;
+}
+.accountInfo .accountInfo_main .safeSetting {
+  width: 100%;
+}
+.accountInfo .accountInfo_main .safeSetting .safeSetting_main {
+  width: 40%;
+  margin: 30px auto;
+  display: block;
+}
+.accountInfo .accountInfo_main .safeSetting .safeSetting_main > p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 32px;
+  color: #333333;
+  text-align: left;
+}
+.accountInfo .accountInfo_main .safeSetting .safeSetting_main > p span {
+  color: #999999;
+}
+.accountInfo .accountInfo_main .safeSetting .safeSetting_main input[type="text"] {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+  color: #555;
+  padding-left: 10px;
+}
+.accountInfo .accountInfo_main .safeSetting .safeSettingBox {
+  width: 40%;
+  margin: 30px auto;
+}
+.accountInfo .accountInfo_main .safeSetting .safeSettingBox > p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 32px;
+  color: #333333;
+  text-align: left;
+}
+.accountInfo .accountInfo_main .safeSetting .safeSettingBox > p span {
+  color: #999999;
+}
+.accountInfo .accountInfo_main .safeSetting .changeSettingBox {
+  width: 40%;
+  margin: 30px auto;
+}
+.accountInfo .accountInfo_main .safeSetting .changeSettingBox > p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 32px;
+  color: #333333;
+  text-align: left;
+}
+.accountInfo .accountInfo_main .safeSetting .changeSettingBox > p span {
+  color: #999999;
+}
+.accountInfo .accountInfo_main .safeSetting .changeSettingBox input[type="text"] {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+  color: #555;
+  padding-left: 10px;
+}
+.accountInfo .accountInfo_main .safeSetting button {
+  width: 45%;
+  height: 35px;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 6px;
+  background: #FE8F19;
+  display: block;
+  margin: 30px auto;
+}
+.accountInfo .accountInfo_main .seted .safeSetting_main {
+  display: none;
+}
+.accountInfo .accountInfo_main .seted .safeSettingBox {
+  display: block;
+}
+.accountInfo .accountInfo_main .seted .changeSettingBox {
+  display: none;
+}
+.accountInfo .accountInfo_main .changeSeted .safeSetting_main {
+  display: none;
+}
+.accountInfo .accountInfo_main .changeSeted .safeSettingBox {
+  display: none;
+}
+.accountInfo .accountInfo_main .changeSeted .changeSettingBox {
+  display: block;
+}
+.accountInfo .accountInfo_main p.error {
+  font-size: 12px !important;
+  line-height: 40px !important;
+  font-weight: 300;
+  color: #F92828 !important;
+  margin: 0 !important;
+}
+.aboutus .aboutus_main {
+  min-height: calc(100vh - 349px);
+  color: #333;
+}
+.aboutus .aboutus_main h4 {
+  font-size: 26px;
+  margin-top: 35px;
+}
+.aboutus .aboutus_main h5 {
+  font-size: 20px;
+  line-height: 70px;
+  color: #D7D7D7;
+}
+.aboutus .aboutus_main .brief {
+  font-size: 24px;
+  line-height: 45px;
+}
+.FAQ {
+  color: #333333;
+}
+.FAQ .FAQ_main {
+  padding-bottom: 80px;
+}
+.FAQ .FAQ_main li {
+  margin-top: 30px;
+}
+.FAQ .FAQ_main li h4 {
+  font-size: 20px;
+  line-height: 70px;
+}
+.FAQ .FAQ_main li .brief {
+  font-size: 18px;
+  line-height: 40px;
+}
+.FAQ .FAQ_main li .brief .title {
+  font-weight: 900;
+}
+.onlineMall .onlineMall_main {
+  min-height: calc(100vh - 314px);
+}
+.onlineMall .onlineMall_main p {
+  font-size: 50px;
+  color: #555;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.gameDetail .gameDetail_main {
+  margin-top: 20px;
+}
+.gameDetail .gameDetail_main .imgBox {
+  width: 100%;
+}
+.gameDetail .gameDetail_main .imgBox img {
+  width: 100%;
+  display: block;
+}
+.gameDetail .gameDetail_main .imgBox .btns {
+  width: 200px;
+  height: 68px;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  background: #4a8098;
+  border: 1px solid #D8B92C;
+  border-radius: 5px;
+}
+.gameDetail .gameDetail_main .imgBox .btns .btnsBox {
+  width: 180px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  background: #ffe000;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #555;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.gameDetail .gameDetail_main .imgBox .btns:hover {
+  background: #fff;
+}
+.gameDetail .gameDetail_main .main {
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  background: #4a8098;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-top: 1px solid #D8B92C;
+  border-bottom: 1px solid #D8B92C;
+}
+.gameDetail .gameDetail_main .main li {
+  width: 25%;
+  font-size: 24px;
+  font-weight: 700;
+}
+.gameDetail .gameDetail_main .main li:hover {
+  color: #D8B92C;
+}
+.gameDetail .gameDetail_main .details {
+  width: 100%;
+  background: #cb5233;
+  text-align: center;
+  padding: 60px 0 80px 0;
+}
+.gameDetail .gameDetail_main .details p {
+  color: #fff;
+  font-size: 28px;
+  height: 46px;
+  line-height: 40px;
+}
+.gameDetail .gameDetail_main .applyBox {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #797979;
+  margin-bottom: 100px;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce {
+  width: 400px;
+  margin: 0 auto;
+  padding: 45px 0 80px 0;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce h3 {
+  font-size: 24px;
+  line-height: 120px;
+  color: #333;
+  font-weight: 400;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main {
+  width: 100%;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 35px;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main li span {
+  width: 80px;
+  height: 100%;
+  display: inline-block;
+  font-weight: 700;
+  color: #333;
+  font-size: 22px;
+  text-align: right;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main li input {
+  width: calc(100% - 95px);
+  height: 100%;
+  border: 1px solid #dadada;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main li.agree {
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main li.agree p {
+  width: calc(100% - 95px);
+  height: 100%;
+  float: right;
+  font-size: 15px;
+  color: #333;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main li.agree p span {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background: url("../image/register/u466_disabled.svg") no-repeat center;
+  background-size: 12px 12px;
+  vertical-align: -1px;
+  margin-right: 2px;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main li.agree p span.checkBox {
+  background: url("../image/register/u466_selected.svg") no-repeat center;
+  background-size: 12px 12px;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce .applyAtOnce_main li.isrequire span::before {
+  content: "*";
+  color: red;
+  margin-right: 1px;
+}
+.gameDetail .gameDetail_main .applyBox .applyAtOnce > button {
+  width: 230px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 3px;
+  color: #1919195f;
+  background: #ededed;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.gameDetail .gameDetail_main .uploadProduct {
+  width: 100%;
+  padding: 40px 150px 80px 100px;
+}
+.gameDetail .gameDetail_main .uploadProduct h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 400;
+}
+.gameDetail .gameDetail_main .uploadProduct h3 {
+  font-size: 20px;
+  line-height: 72px;
+  color: #1919195f;
+  font-weight: 400;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main {
+  width: 100%;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li {
+  width: 100%;
+  margin-bottom: 30px;
+  line-height: 40px;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li span {
+  width: 180px;
+  height: 40px;
+  display: inline-block;
+  color: #1919195f;
+  font-size: 22px;
+  text-align: right;
+  float: left;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li input {
+  float: left;
+  height: 40px;
+  width: 300px;
+  border: 1px solid #dadada;
+  margin-left: 15px;
+  font-size: 17px;
+  color: #333;
+  padding-left: 10px;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li textarea {
+  float: left;
+  width: 300px;
+  height: 120px;
+  border: 1px solid #dadada;
+  margin-left: 15px;
+  resize: none;
+  padding: 10px;
+  font-size: 17px;
+  color: #333;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li input::placeholder,
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li textarea::placeholder {
+  color: #1919195f;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox {
+  width: calc(100% - 200px);
+  float: left;
+  margin-left: 15px;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .choseImg {
+  width: 100%;
+  height: 220px;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .choseImg li {
+  height: 100%;
+  float: left;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .choseImg .plus {
+  font-size: 50px;
+  width: 70px;
+  line-height: 220px;
+  font-weight: 400;
+  color: #999;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .choseImg .box {
+  width: calc((100% - 70px) / 2) !important;
+  border: 1px solid #EDEDED;
+  padding: 58px 35px 0 35px;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .choseImg .box .btn {
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  background: #FE8F19;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 15px;
+  display: block;
+  margin: 0 auto 25px auto;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .choseImg .box > p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #1919195f;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg {
+  width: 100%;
+  margin: 20px 0 10px 0;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg > img {
+  width: 75px;
+  height: 75px;
+  display: block;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg .upImg_main {
+  width: calc(100% - 95px);
+  height: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg .upImg_main p {
+  font-size: 14px;
+  line-height: 14px;
+  color: #666;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg .upImg_main p span {
+  width: auto;
+  height: auto;
+  line-height: 14px;
+  display: inline-block;
+  font-size: 14px;
+  float: none;
+  color: #FE8F19;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg .upImg_main p .icon-guanbi {
+  font-size: 22px;
+  color: #dcdcdc;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg .upImg_main p.file {
+  margin: 15px 0 18px 0;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg .upImg_main .process {
+  width: 100%;
+  height: 8px;
+  background: #efefef;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main > li .uploadBox .upImg .upImg_main .process span {
+  height: 100%;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  background: #FE8F19;
+}
+.gameDetail .gameDetail_main .uploadProduct .uploadProduct_main li.isrequire > span::before {
+  content: "*";
+  color: red;
+  margin-right: 1px;
+}
+.gameDetail .gameDetail_main .uploadProduct > button {
+  width: 200px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 3px;
+  color: #1919195f;
+  background: #ededed;
+  font-size: 20px;
+  margin: 25px 0 0 295px;
+}
+.registerAtOnce .registerAtOnce_main {
+  padding: 30px 0 0 0;
+}
+.registerAtOnce .registerAtOnce_main .copyTitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  display: inline-block;
+  margin-left: 30px;
+}
+.registerAtOnce .registerAtOnce_main .copyTitle span {
+  width: 100%;
+  height: 4px;
+  background: #FE8F19;
+  left: 0;
+  bottom: 3px;
+  opacity: 0.6;
+}
+.registerAtOnce .registerAtOnce_main .application {
+  margin: 28px 0 45px 65px;
+}
+.registerAtOnce .registerAtOnce_main .application li {
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  font-size: 12px;
+  margin-right: 30px;
+  background: url("../image/copy/gray.png") no-repeat center;
+  background-size: 130px 40px;
+  color: #fff;
+}
+.registerAtOnce .registerAtOnce_main .application li span {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  margin-right: 10px;
+  vertical-align: -2px;
+}
+.registerAtOnce .registerAtOnce_main .application li.act {
+  background: url("../image/copy/orange.png") no-repeat center;
+  background-size: 130px 40px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox {
+  width: 100%;
+}
+.registerAtOnce .registerAtOnce_main .registerBox > li {
+  display: none;
+}
+.registerAtOnce .registerAtOnce_main .registerBox > li.act {
+  display: block;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve {
+  width: 100%;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveNav li {
+  float: left;
+  width: 150px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 12px;
+  margin-right: 30px;
+  border-radius: 5px;
+  color: #999999;
+  box-shadow: 0 0 5px #999999;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveNav li .img {
+  width: 22px;
+  height: 24px;
+  background: url("../image/copy/person.png") no-repeat center;
+  background-size: 22px 24px;
+  margin: -3px 12px 0 0;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveNav li:nth-child(2) .img {
+  width: 26px;
+  height: 23px;
+  background: url("../image/copy/home.png") no-repeat center;
+  background-size: 26px 23px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveNav li.act {
+  color: #FE8F19;
+  box-shadow: 0 0 5px #FE8F19;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveNav li:nth-child(1).act .img {
+  background: url("../image/copy/iperson.png") no-repeat center;
+  background-size: 22px 24px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveNav li:nth-child(2).act .img {
+  background: url("../image/copy/ihome.png") no-repeat center;
+  background-size: 26px 23px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain {
+  width: 100%;
+  margin: 55px auto;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox {
+  display: none;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox.act {
+  display: block;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main {
+  width: 100%;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li {
+  width: 100%;
+  margin-bottom: 35px;
+  line-height: 35px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li span.id {
+  line-height: 16px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li span {
+  width: 170px;
+  height: 16px;
+  line-height: 30px;
+  display: inline-block;
+  color: #333333;
+  font-size: 15px;
+  text-align: right;
+  float: left;
+  margin-right: 15px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .uploadBox {
+  width: calc(100% - 185px);
+  float: left;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .uploadBox .photos {
+  width: 100%;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .uploadBox .photos li {
+  float: left;
+  width: 130px;
+  margin-right: 60px;
+  box-sizing: border-box;
+  border: 1px dotted transparent;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .uploadBox .photos li img {
+  width: 100%;
+  display: block;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .uploadBox .photos li:hover {
+  border-color: #94def4;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .uploadBox > p {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 15px;
+  color: #999999;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li > input {
+  float: left;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #CCCCCC;
+  font-size: 15px;
+  color: #333;
+  padding-left: 10px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox {
+  height: 30px;
+  float: left;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox li {
+  height: 100%;
+  float: left;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox .plus {
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  line-height: 30px;
+  color: #ccc;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox .box {
+  width: 160px;
+  height: 100%;
+  position: relative;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox .box .fa-calendar-o {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  color: #333;
+  transform: translateY(-50%);
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox .box input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dadada;
+  font-size: 15px;
+  color: #333;
+  padding-left: 15px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox .box input::placeholder {
+  color: #ccc;
+  letter-spacing: 4px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox .agree {
+  font-size: 12px;
+  color: #999999;
+  text-align: left;
+  line-height: 15px;
+  margin: 8px 0 0 50px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox .agree span {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: url("../image/register/u466_disabled.svg") no-repeat center;
+  background-size: 15px 15px;
+  vertical-align: -2px;
+  margin-right: 8px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .timeBox .agree span.checkBox {
+  background: url("../image/register/u466_selected.svg") no-repeat center;
+  background-size: 15px 15px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .inputBox {
+  width: 300px;
+  height: 30px;
+  float: left;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .inputBox .selector {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .inputBox .selector > select {
+  width: 45%;
+  height: 100%;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  color: #333;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li textarea {
+  float: left;
+  width: 400px;
+  height: 60px;
+  border: 1px solid #ccc;
+  resize: none;
+  padding: 8px;
+  font-size: 13px;
+  color: #333;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .business {
+  float: left;
+  width: 300px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .business > input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  color: #333;
+  padding-left: 10px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .personal_main > li .business p {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 5px;
+  color: #999999;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .approve .approveMain .mainBox .btn {
+  width: 190px;
+  height: 35px;
+  line-height: 35px;
+  background: #FE8F19;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  margin: 70px auto;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist h5 {
+  font-size: 15px;
+  line-height: 30px;
+  color: #333333;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist h6 {
+  font-size: 14px;
+  line-height: 40px;
+  color: #777777;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist > p {
+  margin-bottom: 30px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #999999;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li {
+  margin-top: 15px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li .liBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li .liBox .file {
+  display: block;
+  padding: 0 15px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li .liBox .file .fileImg {
+  width: 60px;
+  height: 60px;
+  display: block;
+  background: #000;
+  margin: 15px auto;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li .liBox .file p {
+  color: #333333;
+  font-size: 12px;
+  line-height: 15px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li .liBox .file span {
+  display: block;
+  color: #FE8F19;
+  font-size: 12px;
+  line-height: 30px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li .liBox > li {
+  width: 200px;
+  height: 140px;
+  box-shadow: 0 0 8px #CCCCCC;
+  border-radius: 6px;
+  margin-right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li .liBox > li img {
+  width: 12px;
+  height: 12px;
+  right: 10px;
+  top: 10px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li .liBox > li .btn {
+  width: 125px;
+  height: 30px;
+  line-height: 30px;
+  background: #FE8F19;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li p {
+  line-height: 50px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist .productRegist_main > li p span {
+  color: #FE8F19;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist p.agree {
+  font-size: 12px;
+  line-height: 12px;
+  color: #9A9A9A;
+  margin-top: 15px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist p.agree span {
+  width: 12px;
+  height: 14px;
+  display: inline-block;
+  background: url("../image/register/u466_disabled.svg") no-repeat center;
+  background-size: 12px 12px;
+  vertical-align: -3px;
+  margin-right: 2px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist p.agree span.checkBox {
+  background: url("../image/register/u466_selected.svg") no-repeat center;
+  background-size: 12px 12px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist p.agree a {
+  font-size: 12px;
+  color: #FE901A;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .productRegist > .btn {
+  width: 180px;
+  height: 35px;
+  line-height: 35px;
+  background: #FE8F19;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  margin: 70px auto;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal {
+  width: 100%;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal > p {
+  font-size: 13px;
+  color: #333;
+  line-height: 15px;
+  margin-bottom: 20px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main {
+  width: calc((100% - 60px) / 4);
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .dealWindow {
+  width: 96%;
+  -moz-box-shadow: 0 0 8px #CCCCCC;
+  -webkit-box-shadow: 0 0 8px #CCCCCC;
+  box-shadow: 0 0 8px #CCCCCC;
+  border-radius: 6px;
+  padding: 12px 11px 0 11px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .dealWindow .imgBox {
+  width: 100%;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .dealWindow .imgBox .mask {
+  width: 100%;
+  height: 240px;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  border-radius: 6px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .dealWindow .imgBox .mask .btn {
+  width: 80%;
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px;
+  border-radius: 6px;
+  background: #FE8F19;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .dealWindow .imgBox img {
+  width: 100%;
+  height: 240px;
+  display: block;
+  border-radius: 6px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .dealWindow .imgBox > p {
+  font-size: 12px;
+  color: #333333;
+  line-height: 40px;
+  margin-top: 2px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main > p {
+  font-size: 12px;
+  color: #999;
+  margin: 12px 0;
+  padding-left: 12px;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .dealing {
+  font-size: 13px;
+  color: #FE8F19;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .dealed {
+  font-size: 13px;
+  color: #02C218;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main .nodeal {
+  color: #FF0000;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main:nth-last-child(1),
+.registerAtOnce .registerAtOnce_main .registerBox .toDeal .toDealBox .toDeal_main:nth-child(4n) {
+  margin-right: 0;
+}
+.registerAtOnce .registerAtOnce_main .registerBox .passApplicated .toDealBox {
+  justify-content: flex-start;
+}
+.login .login_main {
+  width: 320px;
+  margin: 80px auto 60px auto;
+  text-align: center;
+}
+.login .login_main h3 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  color: #FE8F19;
+}
+.login .login_main p.designer {
+  font-size: 14px;
+  color: #888888;
+  line-height: 50px;
+  margin-bottom: 15px;
+}
+.login .login_main .loginBox li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #fff;
+}
+.login .login_main .loginBox li a {
+  font-size: 20px;
+  color: #fff;
+}
+.login .login_main .loginBox li.qq {
+  background: #00c4e6;
+}
+.login .login_main .loginBox li.qq:hover {
+  background: #00cef2;
+}
+.login .login_main .loginBox li.weixin {
+  background: #3ebb2b;
+}
+.login .login_main .loginBox li.weixin:hover {
+  background: #46cf32;
+}
+.login .login_main .loginBox li.phoneCode {
+  border: 1px solid #c3ab7c;
+  background: #fff;
+}
+.login .login_main .loginBox li.phoneCode a {
+  color: #c3ab7c;
+}
+.login .login_main .register {
+  width: 100%;
+  height: 100px;
+  line-height: 50px;
+}
+.login .login_main .register p {
+  font-size: 15px;
+  color: #929292;
+}
+.login .login_main .register p a {
+  color: #FE8F19;
+  text-decoration: underline;
+}
+.myAttention .myAttention_main {
+  padding: 0 100px 100px 0;
+}
+.myAttention .myAttention_main > h4 {
+  font-size: 15px;
+  color: #000;
+  font-weight: 300;
+  margin: 35px 0 25px 0;
+}
+.myAttention .myAttention_main > h4 span {
+  font-size: 18px;
+  font-weight: 400;
+  color: #FE8F19;
+}
+.myAttention .myAttention_main .myAttention_box li {
+  margin-bottom: 70px;
+  height: 130px;
+}
+.myAttention .myAttention_main .myAttention_box li .detail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+}
+.myAttention .myAttention_main .myAttention_box li .detail > img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  border-radius: 50%;
+  margin: 0 20px 0 15px;
+}
+.myAttention .myAttention_main .myAttention_box li .detail .authorBox h4 {
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+}
+.myAttention .myAttention_main .myAttention_box li .detail .authorBox p.city {
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+  line-height: 30px;
+}
+.myAttention .myAttention_main .myAttention_box li .detail .authorBox p.brief {
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
+.myAttention .myAttention_main .myAttention_box li .detail .authorBox p.brief > i {
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 5px;
+}
+.myAttention .myAttention_main .myAttention_box li .detail .authorBox p.brief span.attention {
+  width: 80px;
+  display: inline-block;
+  border: 1px solid #efefef;
+  color: #999;
+  padding: 2px 0;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 3px;
+  margin: 0 60px 0 30px;
+}
+.myAttention .myAttention_main .myAttention_box li .detail .authorBox p.brief span.attention i {
+  font-style: normal;
+  vertical-align: 2px;
+  margin-right: 2px;
+}
+.myAttention .myAttention_main .myAttention_box li .detail .authorBox .attentioned {
+  background: #FE8F19;
+  border: 1px solid #FE8F19 !important;
+  color: #fff !important;
+}
+.myAttention .myAttention_main .myAttention_box li .imgs {
+  height: 100%;
+}
+.myAttention .myAttention_main .myAttention_box li .imgs > img {
+  float: left;
+  width: 190px;
+  height: 100%;
+  margin-right: 12px;
+}
+.myAttention .myAttention_main .myAttention_box li i.icon-z043 {
+  line-height: 130px;
+  font-size: 22px;
+  color: #999;
+  margin-left: 18px;
+}
+.messageDetail .messageDetail_main {
+  padding-bottom: 30px;
+}
+.messageDetail .messageDetail_main h4 {
+  font-size: 36px;
+  text-align: center;
+  color: #333;
+  margin: 50px 0 40px 0;
+}
+.messageDetail .messageDetail_main h5 {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+}
+.messageDetail .messageDetail_main h6 {
+  font-size: 19px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  color: #999;
+  font-weight: 400;
+  text-align: center;
+}
+.messageDetail .messageDetail_main p {
+  width: 70%;
+  font-size: 24px;
+  line-height: 40px;
+  color: #999;
+  display: block;
+  margin: 0 auto;
+}
+.messageDetail .messageDetail_main img {
+  width: 70%;
+  display: block;
+  margin: 20px auto;
+}
+.registerList .registerList_main {
+  min-height: calc(100vh - 314px);
+  padding-bottom: 80px;
+}
+.registerList .registerList_main .copyTitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  display: inline-block;
+  margin: 30px 0 20px 0;
+}
+.registerList .registerList_main .copyTitle span {
+  width: 100%;
+  height: 4px;
+  background: #FE8F19;
+  left: 0;
+  bottom: 3px;
+  opacity: 0.6;
+}
+.registerList .registerList_main .registerBox {
+  width: 100%;
+}
+.registerList .registerList_main .registerBox table {
+  width: 100%;
+  text-align: left;
+}
+.registerList .registerList_main .registerBox table tr {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 13px;
+  border-bottom: 1px solid #E5E5E5;
+}
+.registerList .registerList_main .registerBox table tr th {
+  height: 100%;
+  font-weight: 400;
+  color: #333333;
+}
+.registerList .registerList_main .registerBox table tr td {
+  height: 100%;
+  color: #333333;
+  font-size: 12px;
+}
+.registerList .registerList_main .registerBox table tr td span {
+  margin-right: 20px;
+  color: #FE8F19;
+}
+.registerList .registerList_main .registerBox table tr th:nth-child(1),
+.registerList .registerList_main .registerBox table tr td:nth-child(1) {
+  padding-left: 20px;
+}
+.registerList .registerList_main .registerBox table tr th:nth-last-child(1),
+.registerList .registerList_main .registerBox table tr td:nth-last-child(1) {
+  width: 20%;
+  text-align: center;
+}
+.registerList .registerList_main .registerBox table tr:nth-child(1) {
+  background: #EEEEEE;
+  border: none;
+}
+.registerList .registerList_main .registerBox table .red {
+  color: #EE3F3F;
+}
+.registerList .registerList_main .registerBox table .orange {
+  color: #FE8F19;
+}
+.registerList .registerList_main .registerBox table .green {
+  color: #02C218;
+}
+.protocol {
+  color: #333333;
+}
+.protocol .protocol_main {
+  padding-bottom: 80px;
+}
+.protocol .protocol_main h4 {
+  color: #333;
+  font-size: 16px;
+  line-height: 80px;
+}
+.protocol .protocol_main h3 {
+  color: #333;
+  font-size: 18px;
+  margin: 20px 0;
+}
+.protocol .protocol_main .brief {
+  color: #282828;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+.protocol .protocol_main .details,
+.protocol .protocol_main .detailss {
+  color: #282828;
+  font-size: 13px;
+  line-height: 26px;
+  font-weight: 300;
+}
+.protocol .protocol_main .tips {
+  color: #282828;
+  font-size: 13px;
+  line-height: 26px;
+  margin: 10px 0;
+  display: inline-block;
+}
+.protocol .protocol_main .fw4 {
+  font-weight: 400;
+  display: inline-block;
+}
+/*# sourceMappingURL=index.css.map */

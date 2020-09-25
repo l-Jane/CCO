@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>header</title>
+</head>
+<body>
+<div id="headerBox"></div>
+
+<script id="header" type="text/html">
+    <div class="nav">
+        <div class="nav_main">
+            <nav class="navbar navbar-expand-lg navbar-light" style="width: 100%">
+                <a href="./index.html" class="navIcon navbar-brand">
+                    <img src="./image/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse navLength" id="navbarSupportedContent">
+                    <ul class="navList navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">首页</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./album.html">CC0图库</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./design.html">设计师作品</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./gameWall.html">赛事通道</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./onlineMall.html">线上商城</a></li>
+                    </ul>
+
+                    <div class="loginBox">
+                        <div class="loginBox_main clearfix">
+                            <a href="javascript:;" class="loginWeb">登录</a>
+                            <a href="javascript:;" class="aline">|</a>
+                            <a href="javascript:;" class="registerWeb">注册</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</script>
+<script id="headerLogined" type="text/html">
+    {{if data}}
+    <div class="nav searchNav">
+        <div class="nav_main">
+            <nav class="navbar navbar-expand-lg navbar-light" style="width: 100%">
+                <a href="./index.html" class="navIcon navbar-brand">
+                    <img src="./image/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse navLength" id="navbarSupportedContent">
+                    <ul class="navList navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">首页</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./album.html">CC0图库</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./design.html">设计师作品</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./gameWall.html">赛事通道</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./onlineMall.html">线上商城</a></li>
+                    </ul>
+
+                    <div class="loginBoxed">
+                        <div class="searchInput">
+                            <div class="searchInput_main rela">
+                                <img class="abso" src="./image/imgs/search.png" alt="">
+                                <input type="text" placeholder="搜索免费版权CC0图片" class="inputSearch" onfocus="window.location.href = 'searchPage.html?keys='">
+                            </div>
+                        </div>
+                        <div class="headImg rela">
+                            <img src="{{data.u.headPic}}" alt="">
+                            <ul class="headImg_main abso">
+                                <li><a href="./person.html">个人主页</a></li>
+                                <li><a href="./myCollect.html">我的收藏</a></li>
+                                <li><a href="./uploadMine.html">上传原创</a></li>
+                                <li><a href="./accountInfo.html">账户资料</a></li>
+                                <li><a href="#" id="loginOut">退出登录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {{/if}}
+</script>
+<script>
+    var login, phoneLogin, register, phoneRegist, company;
+    var userInfo = window.localStorage.getItem("userInfo") && JSON.parse(window.localStorage.getItem("userInfo")).token;
+    var pageName = window.location.pathname.split("/");
+    var currentName = pageName[pageName.length - 1].split(".")[0];
+
+    $(function () {
+        layui.use('layer', function () {
+            if (!userInfo) {
+                var items = template("header", {});
+                $("#headerBox").html(items)
+                currentPage()
+            } else {
+                $.ajax({
+                    url: "http://api.cc04u.cc/getUserInfo?token=" + userInfo,
+                    success: function (res) {
+                        var items = template("headerLogined", res);
+                        $("#headerBox").html(items)
+                        currentPage()
+                        $("#loginOut").click(() => {
+                            window.localStorage.removeItem("userInfo");
+                            window.location.href = "index.html"
+                        })
+                        $(".headImg >img").click(function () {
+                            window.location.href = "./person.html"
+                        })
+                    }
+                })
+            }
+
+
+            $('.loginWeb').on('click', function () {
+                openLogin()
+            });
+            $('.registerWeb').on('click', function () {
+                openRegister()
+            });
+        })
+    })
+    function currentPage() {
+        if(currentName === "index") {
+            $(".navList >li:eq(0)").addClass("act")
+        } else if(currentName === "album" || currentName === "allSource" || currentName === "sourceDetail" || currentName === "imgDetail" || currentName === "allType" || currentName === "typeDetail") {
+            $(".navList >li:eq(1)").addClass("act")
+        } else if (currentName === "design") {
+            $(".navList >li:eq(2)").addClass("act")
+        } else if (currentName === "gameWall" || currentName === "gameDetail" || currentName === "gameApply") {
+            $(".navList >li:eq(3)").addClass("act")
+        } else if (currentName === "onlineMall") {
+            $(".navList >li:eq(4)").addClass("act")
+        } else {
+            $(".navList >li").removeClass("act")
+        }
+    }
+
+    // 登录弹窗 显示隐藏
+    function openLogin() {
+        login = layer.open({
+            type: 1,
+            area: ['550px', 'auto'],
+            shade: 0.3,
+            shadeClose: false, //点击遮罩关闭
+            content: '<div id="loginBox">\n' +
+                '            <img src="./image/login/reglogo.png" alt="" class="logo">\n' +
+                '            <p>CC0作品典藏者</p>\n' +
+                '            <ul class="loginBoxBtn">\n' +
+                '                <li onclick="showMsg()">\n' +
+                '                    <img src="./image/login/weixin.png" alt="">\n' +
+                '                    <p class="weixin">微信登录</p>\n' +
+                '                </li>\n' +
+                '                <li onclick="showMsg()">\n' +
+                '                    <img src="./image/login/qq.png" alt="">\n' +
+                '                    <p class="qq">QQ登录</p>\n' +
+                '                </li>\n' +
+                '                <li onclick="openPhoneLogin()">\n' +
+                '                    <img src="./image/login/phone.png" alt="">\n' +
+                '                    <p class="company">手机登录</p>\n' +
+                '                </li>\n' +
+                '            </ul>\n' +
+                '            <p class="registed">还没有兮兮灵账号？<a href="javascript:;" onclick="closeLogin();openRegister()">点击注册</a></p>\n' +
+                '        </div>'
+        });
+    }
+    function closeLogin() {
+        layer.close(login)
+    }
+
+    // 手机验证码登录弹窗 显示隐藏
+    var phoneClick = true, isPhoneValidate = false, second = 60;
+    function openPhoneLogin() {
+        phoneLogin = layer.open({
+            type: 1,
+            area: ['550px', 'auto'],
+            shade: 0.3,
+            shadeClose: false, //点击遮罩关闭
+            content: '<div id="phoneLoginBox">\n' +
+                '        <img src="./image/login/reglogo.png" alt="" class="logo">\n' +
+                '        <p>CC0作品典藏者</p>\n' +
+                '        <ul class="phoneLogin">\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">手机号：</span>\n' +
+                '                <input class="fl" type="text" id="phoneNum">\n' +
+                '            </li>\n' +
+                '            <li class="clearfix">\n' +
+                '                <span class="fl"></span>\n' +
+                '                <div class="fl codeValidate" id="phoneLoginCodeValidate"></div>\n' +
+                '            </li>\n' +
+                '            <li class="code clearfix">\n' +
+                '                <span class="fl"></span>\n' +
+                '                <div class="sendBox fl">\n' +
+                '                    <input class="fl" type="text" id="codeInput">\n' +
+                '                    <span class="fr sendcode" onclick="phoneSendCode()" id="phoneLoginCode">发送验证码</span>\n' +
+                '                </div>\n' +
+                '            </li>\n' +
+                '            <li class="clearfix">\n' +
+                '                <span class="fl"></span>\n' +
+                '                <p class="agree fl">\n' +
+                '                    <span id="phoneLoginCheckBox" onclick="phoneLoginChoiceCheck()"></span>\n' +
+                '                    勾选代表你同意\n' +
+                '                    <a href="./userProtocol.html">《用户协议》</a>\n' +
+                '                    <a href="./privacyProtocol.html">《隐私协议》</a>\n' +
+                '                </p>\n' +
+                '            </li>\n' +
+                '        </ul>\n' +
+                '        <button onclick="phoneLoginEvent()">登录</button>\n' +
+                '\n' +
+                '        <p class="registed">还没有兮兮零账号？<a href="javascript:;" onclick="closeLogin();closePhoneLogin();openRegister()">点击注册</a></p>\n' +
+                '    </div>'
+        });
+
+        var sliding_validation = SlidingValidation.create($('#phoneLoginCodeValidate'), {}, function () {
+            isPhoneValidate = true
+        });
+    }
+    function phoneSendCode() {
+        if (!phoneClick) return;
+        if (!$("#phoneNum").val() || $("#phoneNum").val().length < 11) {
+            layer.msg('输入11位手机号');
+            return;
+        }
+        if(!isPhoneValidate) {
+            layer.msg('尚未验证');
+            return
+        }
+        phoneClick = false;
+        $("#phoneLoginCode").text('重新获取(60s)')
+        $("#phoneLoginCode").addClass('getting')
+        let timer = setInterval(() => {
+            second = second - 1;
+            if (second < 10) {
+                $("#phoneLoginCode").text('重新获取(0' + second + 's)')
+            } else {
+                $("#phoneLoginCode").text('重新获取(' + second + 's)')
+            }
+            if (second < 1) {
+                $("#phoneLoginCode").text('获取验证码')
+                $("#phoneLoginCode").removeClass('getting')
+                second = 60;
+                phoneClick = true;
+                clearInterval(timer);
+            }
+        }, 1000);
+
+        $.ajax({
+            url: "http://api.cc04u.cc/api/smsSend",
+            type: 'post',
+            data: {
+                smsType: "login",
+                mobile: $("#phoneNum").val()
+            },
+            success: function (res) {
+                layer.msg(res.msg);
+            }
+        })
+    }
+    function closePhoneLogin() {
+        layer.close(phoneLogin)
+    }
+    function phoneLoginEvent() {
+        if (!$("#phoneNum").val() || $("#phoneNum").val().length < 11) {
+            layer.msg('输入11位手机号');
+            return;
+        }
+        if(!isPhoneValidate) {
+            layer.msg('尚未验证');
+            return
+        }
+        if(!$("#codeInput").val() || $("#codeInput").val().length < 6) {
+            layer.msg('输入6位验证码');
+            return
+        }
+        if ($("#phoneLoginCheckBox").attr("class") != "checkBox") {
+            layer.msg('请先同意协议');
+            return
+        }
+        $.ajax({
+            url: "http://api.cc04u.cc/login",
+            type: 'post',
+            data: {
+                mobile: $("#phoneNum").val(),
+                code: $("#codeInput").val(),
+                loginType: 1
+            },
+            success: function (res) {
+                if (res.code == 0) {
+                    window.localStorage.setItem("userInfo", JSON.stringify(res.data))
+                    layer.msg("登录成功！");
+                    setTimeout(() => {
+                        window.location.reload()
+                    }, 800)
+                }
+            }
+        })
+    }
+    function phoneLoginChoiceCheck() {
+        $("#phoneLoginCheckBox").toggleClass("checkBox")
+    }
+
+    // 注册弹窗 显示隐藏
+    function openRegister() {
+        register = layer.open({
+            type: 1,
+            area: ['550px', 'auto'],
+            shade: 0.3,
+            shadeClose: false, //点击遮罩关闭
+            content: '<div id="registBox">\n' +
+                '        <img src="./image/login/reglogo.png" alt="" class="logo">\n' +
+                '        <p>您将成为兮兮灵第10,855,226名设计师</p>\n' +
+                '        <ul class="registBoxBtn">\n' +
+                '            <li onclick="showMsg()">\n' +
+                '                <img src="./image/login/weixin.png" alt="">\n' +
+                '                <p class="weixin">微信注册</p>\n' +
+                '            </li>\n' +
+                '            <li onclick="showMsg()">\n' +
+                '                <img src="./image/login/qq.png" alt="">\n' +
+                '                <p class="qq">QQ注册</p>\n' +
+                '            </li>\n' +
+                '            <li onclick="openCompany()">\n' +
+                '                <img src="./image/login/company.png" alt="">\n' +
+                '                <p class="company">企业/机构注册</p>\n' +
+                '            </li>\n' +
+                '        </ul>\n' +
+                '        <p class="agree">\n' +
+                '            <span id="registerCheckBox" onclick="registChoiceCheck()"></span>\n' +
+                '            勾选代表您同意\n' +
+                '            <a href="./userProtocol.html">《用户协议》</a>\n' +
+                '            <a href="./privacyProtocol.html">《隐私协议》</a>\n' +
+                '        </p>\n' +
+                '        <div class="registChoice clearfix">\n' +
+                '            <a class="fl" href="javascript:;" onclick="openPhoneRegist()">手机号注册</a>\n' +
+                '            <p class="registed fr">已有账号？<a href="javascript:;" onclick="closeRegister();openLogin()">登录</a>到兮兮灵</p>\n' +
+                '        </div>\n' +
+                '    </div>'
+        });
+    }
+    function closeRegister() {
+        layer.close(register)
+    }
+    function registChoiceCheck() {
+        $("#registerCheckBox").toggleClass("checkBox")
+    }
+
+    // 手机注册弹窗 显示隐藏
+    var phoneRegistClick = true, isPhoneRegistValidate = false, registSecond = 60;
+    function openPhoneRegist() {
+        phoneRegist = layer.open({
+            type: 1,
+            area: ['550px', 'auto'],
+            shade: 0.3,
+            shadeClose: false, //点击遮罩关闭
+            content: '<div id="phoneRegisterBox">\n' +
+                '        <img src="./image/login/reglogo.png" alt="" class="logo">\n' +
+                '        <p>您将成为兮兮灵第10,855,226名设计师</p>\n' +
+                '        <ul class="phoneRegister">\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">手机号：</span>\n' +
+                '                <input class="fl" type="text" id="registPhone">\n' +
+                '            </li>\n' +
+                '            <li class="clearfix">\n' +
+                '                <span class="fl"></span>\n' +
+                '                <div class="fl codeValidate" id="phoneRegistCodeValidate"></div>\n' +
+                '            </li>\n' +
+                '            <li class="code clearfix">\n' +
+                '                <span class="fl"></span>\n' +
+                '                <div class="sendBox fl">\n' +
+                '                    <input class="fl" type="text" id="codeRegistInput">\n' +
+                '                    <span class="fr sendcode" onclick="phoneRegistSendCode()" id="phoneRegistCode">发送验证码</span>\n' +
+                '                </div>\n' +
+                '            </li>\n' +
+                '            <li class="clearfix">\n' +
+                '                <span class="fl"></span>\n' +
+                '                <p class="agree fl">\n' +
+                '                    <span id="phoneRegistCheckBox" onclick="phoneRegistChoiceCheck()"></span>\n' +
+                '                    勾选代表你同意\n' +
+                '                    <a href="./userProtocol.html">《用户协议》</a>\n' +
+                '                    <a href="./privacyProtocol.html">《隐私协议》</a>\n' +
+                '                </p>\n' +
+                '            </li>\n' +
+                '        </ul>\n' +
+                '        <button onclick="phoneRegistEvent()">注册</button>\n' +
+                '\n' +
+                '        <p class="registed">已有账号？<a href="javascript:;" onclick="closeRegister();closePhoneRegist();openLogin();">登录</a>到兮兮灵</p>\n' +
+                '    </div>'
+        });
+
+        var sliding_validation = SlidingValidation.create($('#phoneRegistCodeValidate'), {}, function () {
+            isPhoneRegistValidate = true
+        });
+    }
+    function phoneRegistSendCode() {
+        if (!phoneRegistClick) return;
+        if (!$("#registPhone").val() || $("#registPhone").val().length < 11) {
+            layer.msg('输入11位手机号');
+            return;
+        }
+        if(!isPhoneRegistValidate) {
+            layer.msg('尚未验证');
+            return
+        }
+        phoneRegistClick = false;
+        $("#phoneRegistCode").text('重新获取(60s)')
+        $("#phoneRegistCode").addClass('getting')
+        let timer = setInterval(() => {
+            registSecond = registSecond - 1;
+            if (registSecond < 10) {
+                $("#phoneRegistCode").text('重新获取(0' + registSecond + 's)')
+            } else {
+                $("#phoneRegistCode").text('重新获取(' + registSecond + 's)')
+            }
+            if (registSecond < 1) {
+                $("#phoneRegistCode").text('获取验证码')
+                $("#phoneRegistCode").removeClass('getting')
+                registSecond = 60;
+                phoneRegistClick = true;
+                clearInterval(timer);
+            }
+        }, 1000);
+
+        $.ajax({
+            url: "http://api.cc04u.cc/api/smsSend",
+            type: 'post',
+            data: {
+                smsType: "login",
+                mobile: $("#registPhone").val()
+            },
+            success: function (res) {
+                layer.msg(res.msg);
+            }
+        })
+    }
+    function phoneRegistEvent() {
+        // closeRegister();closePhoneRegist()
+        if (!$("#registPhone").val() || $("#registPhone").val().length < 11) {
+            layer.msg('输入11位手机号');
+            return;
+        }
+        if(!isPhoneRegistValidate) {
+            layer.msg('尚未验证');
+            return
+        }
+        if(!$("#codeRegistInput").val() || $("#codeRegistInput").val().length < 6) {
+            layer.msg('输入6位验证码');
+            return
+        }
+        if ($("#phoneRegistCheckBox").attr("class") != "checkBox") {
+            layer.msg('请先同意协议');
+            return
+        }
+        $.ajax({
+            url: "http://api.cc04u.cc/login",
+            type: 'post',
+            data: {
+                mobile: $("#registPhone").val(),
+                code: $("#codeRegistInput").val(),
+                loginType: 1
+            },
+            success: function (res) {
+                if (res.code == 0) {
+                    window.localStorage.setItem("userInfo", JSON.stringify(res.data))
+                    layer.msg("登录成功！");
+                    setTimeout(() => {
+                        window.location.reload()
+                    }, 800)
+                }
+            }
+        })
+    }
+    function closePhoneRegist() {
+        layer.close(phoneRegist)
+    }
+    function phoneRegistChoiceCheck() {
+        $("#phoneRegistCheckBox").toggleClass("checkBox")
+    }
+
+    // 企业/机构注册 弹窗 显示隐藏
+    function openCompany() {
+        showMsg()
+        return
+        company = layer.open({
+            type: 1,
+            area: ['550px', 'auto'],
+            shade: 0.3,
+            shadeClose: false, //点击遮罩关闭
+            content: '<div id="companyBox">\n' +
+                '        <img src="./image/login/reglogo.png" alt="" class="logo">\n' +
+                '        <p>您将成为兮兮灵第10,855,226名设计师</p>\n' +
+                '        <ul class="organizeRegisterBox">\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">企业/机构名称：</span>\n' +
+                '                <input class="fl" type="text">\n' +
+                '            </li>\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">工作室人数：</span>\n' +
+                '                <div class="inputBox fl">\n' +
+                '                    <select>\n' +
+                '                        <option value="1">1-4人</option>\n' +
+                '                        <option value="2">5-10人</option>\n' +
+                '                        <option value="3">11-30人</option>\n' +
+                '                        <option value="4">31-100人</option>\n' +
+                '                        <option value="5">100人以上</option>\n' +
+                '                    </select>\n' +
+                '                </div>\n' +
+                '            </li>\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">所在城市：</span>\n' +
+                '                <div class="inputBox fl">\n' +
+                '                    <div class="selector" data-toggle="distpicker">\n' +
+                '                        <select></select>\n' +
+                '                        <select></select>\n' +
+                '                    </div>\n' +
+                '                </div>\n' +
+                '            </li>\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">成立时间：</span>\n' +
+                '                <input class="fl" type="text">\n' +
+                '            </li>\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">手机号码：</span>\n' +
+                '                <input class="fl" type="text">\n' +
+                '            </li>\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">绑定QQ：</span>\n' +
+                '                <button class="qq">QQ一键绑定</button>\n' +
+                '            </li>\n' +
+                '            <li class="clearfix isrequire">\n' +
+                '                <span class="fl">绑定微信：</span>\n' +
+                '                <button class="weixin">微信一键绑定</button>\n' +
+                '            </li>\n' +
+                '            <li class="clearfix">\n' +
+                '                <span class="fl"></span>\n' +
+                '                <p class="agree">\n' +
+                '                    <span id="companyCheckBox" onclick="companyChoiceCheck()"></span>\n' +
+                '                    勾选代表你同意\n' +
+                '                    <a href="./userProtocol.html">《用户协议》</a>\n' +
+                '                    <a href="./privacyProtocol.html">《隐私协议》</a>\n' +
+                '                </p>\n' +
+                '            </li>\n' +
+                '        </ul>\n' +
+                '        <button onclick="closeRegister();closeCompany()">注册</button>\n' +
+                '    </div>'
+        });
+
+        $(function () {
+            $('[data-toggle="distpicker"]').distpicker();
+        });
+    }
+    function closeCompany() {
+        layer.close(company)
+    }
+    function companyChoiceCheck() {
+        $("#companyCheckBox").toggleClass("checkBox")
+    }
+
+    function showMsg() {
+        layer.msg("功能开发中");
+    }
+</script>
+</body>
+</html>

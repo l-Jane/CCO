@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片详情</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/HappyImage.min.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <script src="./js/Sliding_Validation_Gu.js" type="text/javascript"></script>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="imgDetail">
+    <div id="headerBox"></div>
+    <div id="searchBox" class="banxin"></div>
+    <div class="imgDetail_main banxin" id="detailBox">
+        <div class="remmentList" id="remmentBox"></div>
+    </div>
+    <div id="footerBox"></div>
+</div>
+
+<script id="detail" type="text/html">
+    {{if data}}
+    <div class="imgMain rela">
+        <img src="{{data.picInfo.url}}" alt="">
+        <div class="imgDetailBox abso">
+            <div class="imgBox">
+                {{if data.likeStatus == true}}
+                <div class="good act nice" data-type="1"></div>
+                {{else}}
+                <div class="good nice" data-type="0"></div>
+                {{/if}}
+
+                {{if data.collectStatus == true}}
+                <div class="collect act nice" data-type="1"></div>
+                {{else}}
+                <div class="collect nice" data-type="0"></div>
+                {{/if}}
+                <img class="down" src="./image/imgs/down.png" alt="" data-url="{{data.picInfo.url}}" id="download">
+            </div>
+            <div class="briefBox">
+                <h4>{{data.picInfo.name}} | {{data.picInfo.type}}</h4>
+                <p>{{data.picInfo.sourceName}}</p>
+            </div>
+        </div>
+    </div>
+    {{if data.subtype}}
+    <ul class="cateList clearfix">
+        <li><a href="./typeDetail.html">动物</a></li>
+    </ul>
+    {{/if}}
+    <div class="remmentBox">
+        <img src="./image/t2.png" alt="" onclick="jumpPerson()">
+        <div class="remmentBox_main">
+            <textarea placeholder="发表评论" id="commentText"></textarea>
+            <button onclick="sendComment()">发布</button>
+        </div>
+    </div>
+    {{if data.subtype}}
+    <div class="loginedRemmentBox">
+        <p>
+            <span>登录</span> 后发表评论
+        </p>
+    </div>
+    {{/if}}
+    {{/if}}
+</script>
+<script id="remment" type="text/html">
+    {{if data}}
+    <h4>全部评论（{{data.length}}）</h4>
+    <ul class="remmentList_main">
+        {{each data value}}
+        <li>
+            <img src="./image/t2.png" alt="" onclick="jumpPerson()">
+            <div class="liBox">
+                <h4>{{value.uname}}</h4>
+                <p class="content">{{value.content}}</p>
+                <p class="time">{{value.time}}</p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</script>
+<script>
+    var id = getQueryString("imgId");
+    var userInfo = window.localStorage.getItem("userInfo") && JSON.parse(window.localStorage.getItem("userInfo")).token;
+
+    $(function () {
+        $('#headerBox').load('common/header.html');
+        $('#footerBox').load('common/footer.html');
+        $('#searchBox').load('common/search.html');
+
+        $.ajax({
+            url: "http://api.cc04u.cc/pic/detail?picId=" + id + "&token=" + userInfo,
+            success: function (res) {
+                var items = template("detail", res);
+                $("#detailBox").prepend(items)
+
+                $(".good").click(function () {
+                    if(!userInfo) {
+                        layer.msg("请先登录");
+                        return
+                    }
+                    let type = $(this)[0].dataset.type
+                    $.ajax({
+                        url: "http://api.cc04u.cc/savePicLike",
+                        type: "post",
+                        data: {
+                            picId: id,
+                            token: userInfo,
+                            type: type
+                        },
+                        success: function (res) {
+                            layer.msg(res.msg);
+                            setTimeout(function () {
+                                window.location.reload()
+                            }, 800)
+                        }
+                    })
+                })
+                $(".collect").click(function () {
+                    if(!userInfo) {
+                        layer.msg("请先登录");
+                        return
+                    }
+                    let type = $(this)[0].dataset.type
+                    $.ajax({
+                        url: "http://api.cc04u.cc/savePicCollect",
+                        type: "post",
+                        data: {
+                            picId: id,
+                            token: userInfo,
+                            type: type
+                        },
+                        success: function (res) {
+                            layer.msg(res.msg);
+                            setTimeout(function () {
+                               window.location.reload()
+                            }, 800)
+                        }
+                    })
+                })
+
+                $("#download").click(function () {
+                    window.location.href = $(this)[0].dataset.url
+                })
+            }
+        })
+        $.ajax({
+            url: "http://api.cc04u.cc/queryComments?picId=" + id,
+            success: function (res) {
+                res.data.forEach(v => {
+                    v.time = timestampToTime(v.time)
+                })
+                var items = template("remment", res);
+                $("#remmentBox").html(items)
+            }
+        })
+    })
+
+    function sendComment() {
+        if (!$("#commentText").val()) {
+            layer.msg('评论不可为空！');
+            return
+        }
+        $.ajax({
+            url: "http://api.cc04u.cc/saveComments",
+            type: "post",
+            data: {
+                picId: id,
+                token: userInfo,
+                content: $("#commentText").val()
+            },
+            success: function (res) {
+                if (res.code == 0) {
+                    layer.msg('评论成功！');
+                    setTimeout(() => {
+                        window.location.reload()
+                    }, 800)
+                }
+            }
+        })
+    }
+
+    function timestampToTime(timestamp) {
+        var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        var D = date.getDate() + ' ';
+        var h = date.getHours() + ':';
+        var m = date.getMinutes() + ':';
+        var s = date.getSeconds();
+        return Y+M+D+h+m+s;
+    }
+</script>
+</body>
+</html>

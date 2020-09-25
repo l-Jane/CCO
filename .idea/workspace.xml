@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89cd8710-19f4-4490-8575-243326396514" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/FAQ.html" beforeDir="false" afterPath="$PROJECT_DIR$/FAQ.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/accountInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/album.html" beforeDir="false" afterPath="$PROJECT_DIR$/album.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/allSource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allType.html" beforeDir="false" afterPath="$PROJECT_DIR$/allType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/connectUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/copyright.html" beforeDir="false" afterPath="$PROJECT_DIR$/copyright.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/common.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/common.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameApply.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameApply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameUpload.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameUpload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameWall.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameWall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/imgDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messageDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/messageDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myAttention.html" beforeDir="false" afterPath="$PROJECT_DIR$/myAttention.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myCollect.html" beforeDir="false" afterPath="$PROJECT_DIR$/myCollect.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myFans.html" beforeDir="false" afterPath="$PROJECT_DIR$/myFans.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineMall.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineMall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/person.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/privacyProtocol.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacyProtocol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registerAtOnce.html" beforeDir="false" afterPath="$PROJECT_DIR$/registerAtOnce.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registerList.html" beforeDir="false" afterPath="$PROJECT_DIR$/registerList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/searchPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourceDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/sourceDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploadMine.html" beforeDir="false" afterPath="$PROJECT_DIR$/uploadMine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userProtocol.html" beforeDir="false" afterPath="$PROJECT_DIR$/userProtocol.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <exe-path />
+    <config-path />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1hwi0M6Xx6tpSCeb65SMy2d3knM" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89cd8710-19f4-4490-8575-243326396514" name="默认更改列表" comment="" />
+      <created>1600928330976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600928330976</updated>
+      <workItem from="1600928333935" duration="2000" />
+      <workItem from="1600956340953" duration="6057000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

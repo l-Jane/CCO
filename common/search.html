@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>search</title>
+</head>
+<body>
+<div class="navSearchBox">
+    <div class="navSearch rela">
+        <div class="searchBox abso" onclick="toPages()">
+            <img class="center" src="./image/home/search.png" alt="">
+        </div>
+        <input type="text" placeholder="搜索CC0素材、设计师作品" class="inputSearch" id="searchInput">
+    </div>
+    <div class="keys" id="keyword">关键词提示：<p id="searchKey"></p></div>
+</div>
+</body>
+
+<script id="search" type="text/html">
+    {{if data}}
+    {{each data value index}}
+    {{if index != 0}} &nbsp;|&nbsp; {{/if}}
+    <span data-id="{{value.id}}">{{value.key}}</span>
+    {{/each}}
+    {{/if}}
+</script>
+<script>
+    var keys = getQueryString("keys");
+
+    $(function () {
+        if(keys) $("#searchInput").val(keys);
+
+        $('#searchInput').bind('keypress',function(event){
+            if(event.keyCode == "13"){
+                toPages()
+            }
+        });
+
+        $.ajax({
+            url: "http://api.cc04u.cc/hotSearch",
+            success: function (res) {
+                var items = template("search", res);
+                $("#searchKey").html(items)
+                $("#searchKey >span").click(function () {
+                    $("#searchInput").val($(this).text())
+                    toSearch($(this).text())
+                })
+            }
+        })
+    })
+
+    function toPages() {
+        if (!$("#searchInput").val()) {
+            layer.msg('关键词不可为空！');
+            return
+        }
+        toSearch($("#searchInput").val())
+    }
+
+    function toSearch (keys) {
+        window.location.href = "searchPage.html?keys=" + encodeURI(keys)
+    }
+
+</script>
+
+</html>

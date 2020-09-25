@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/sliderx.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/HappyImage.min.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <script src="./js/Sliding_Validation_Gu.js" type="text/javascript"></script>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="home">
+    <div id="headerBox"></div>
+    <div class="banxin">
+        <div class="navSearchBox">
+            <div class="navSearch rela">
+                <div class="searchBox abso" onclick="toPages()">
+                    <img class="center" src="./image/home/search.png" alt="">
+                </div>
+                <input type="text" placeholder="搜索CC0素材、设计师作品" class="inputSearch" id="inputSearch">
+            </div>
+        </div>
+    </div>
+    <div class="home_main banxin">
+        <ul class="imgBox clearfix" id="homeListBox"></ul>
+    </div>
+    <div id="footerBox"></div>
+</div>
+</body>
+
+<script id="homeList" type="text/html">
+    {{if data}}
+    {{each data value index}}
+    <li>
+        <div class="title">
+            <div class="titleLine"></div>
+            <h3><img src="./image/home/fire.png" alt="">{{value.name}}</h3>
+        </div>
+        {{if value.name == '资讯热搜榜'}}
+        <div class="imgFireBox">
+            <div>
+                {{each value.list item i}}
+                <div><img src="{{item.pic}}" onclick="jumpMessage(event)" data-id="{{item.id}}"></div>
+                {{/each}}
+            </div>
+        </div>
+        {{else}}
+        <div class="imgFireBox">
+            <div>
+                {{each value.list item i}}
+                <div><img src="{{item.indexUrl}}" onclick="jumpDetail(event)" data-url="{{item.content}}"></div>
+                {{/each}}
+            </div>
+        </div>
+        {{/if}}
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+
+<script>
+    $(function () {
+        $('#headerBox').load('common/header.html');
+        $('#footerBox').load('common/footer.html');
+
+        $.ajax({
+            url: "http://api.cc04u.cc/home",
+            success: function (res) {
+                var items = template("homeList", res);
+                $("#homeListBox").html(items)
+
+                $(".imgFireBox").HappyImage({
+                    arrowHoverShow: true,
+                    autoplay: 4000,
+                    dot: false
+                });
+            }
+        })
+    })
+
+    function jumpDetail(e) {
+        let url = e.target.dataset.url
+        window.location.href = url
+    }
+    function jumpMessage(e) {
+        let id = e.target.dataset.id
+        window.location.href = "./messageDetail.html?newsId=" + id
+    }
+
+    function toPages() {
+        if (!$("#inputSearch").val()) {
+            layer.msg('关键词不可为空！');
+            return
+        }
+        window.location.href = "searchPage.html?keys=" + encodeURI($("#inputSearch").val())
+    }
+</script>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上传原创</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/HappyImage.min.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <script src="./js/Sliding_Validation_Gu.js" type="text/javascript"></script>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="uploadMine">
+    <div id="headerBox"></div>
+    <div class="uploadMine_main banxin">
+        <div class="windowBox">
+            <div class="category">
+                <ul>
+                    <li class="active">分享原创图片</li>
+                    <li>填写信息（1）</li>
+                    <li>待处理（<span id="dealLength">0</span>）</li>
+                    <li>审核通过（<span id="dealPassLength">0</span>）</li>
+                </ul>
+            </div>
+            <div class="cont shareMine active">
+                <p class="tips">提示：1、满足源文件和预览图文件名相同后，系统会自动匹配上传；2、目前兮兮零仅合作原创、独家授权作品。</p>
+                <div class="shareMine_main">
+                    <h4>上传源文件</h4>
+                    <div class="choseImg clearfix" style="margin-bottom: 40px;">
+                        <div class="box addImg">
+                            <input type="file" value="选择源文件" name="uploadFile" id="uploadFile">
+                            <p>支持rar、zip、jpg、psd、ai、cdr、tif、abr、ppt、eps...等格式，体积在300MB以下</p>
+                        </div>
+                        <div id="filesBox"></div>
+                    </div>
+                    <!--                    <h4>上传预览图</h4>-->
+                    <!--                    <ul class="choseImg">-->
+                    <!--                        <li class="box">-->
+                    <!--                            <div class="btn">选择预览图</div>-->
+                    <!--                            <p>请上传72分辨率宽大于1024像素JPG图片</p>-->
+                    <!--                        </li>-->
+                    <!--                    </ul>-->
+                    <!--                    <p class="error">请上传预览图</p>-->
+                    <button id="submitImg">提交</button>
+                    <div class="attentionThing">
+                        <h6>注意事项：</h6>
+                        <p>1、所上传作品预览图与所上传的源文件需保持一致</p>
+                        <p>2、预览图不得含有明显的联系方式，如QQ、电话、网址、二维码</p>
+                        <p>3、标题请用一句话来描述，关键词包含素材风格、用途、内容、行业等词组，一般3组以上，关键词之间请用空格隔开。</p>
+                        <p class="tip">温馨提醒：第一次上传用户请认真阅读<a href="userProtocol.html">《用户协议》</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="cont fillInfos show" id="fillInfos">
+                <div class="fillInfo">
+                    <p>已上传1张，请完善图片信息！</p>
+                    <div class="fillInfoBox">
+                        <div class="fillInfos_main">
+                            <div class="imgBox rela">
+                                <div class="mask abso">
+                                    <div class="btn">完善图片信息</div>
+                                </div>
+                                <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4100138946,1788218220&fm=26&gp=0.jpg"
+                                     alt="">
+                                <p>宁静的湖泊.psd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fillForm">
+                    <p>完善图片信息</p>
+                    <div class="fillFormBox">
+                        <img src="./image/t2.png" alt="">
+                        <ul class="fillFormBox_main">
+                            <li class="isrequire">
+                                <span>作品名称：</span>
+                                <div class="inputForm">
+                                    <input type="text" id="name">
+                                </div>
+                            </li>
+                            <li class="isrequire">
+                                <span>作品类型：</span>
+                                <div class="inputForm">
+                                    <div class="selector">
+                                        <select name="type">
+                                            <option value="产品设计">产品设计</option>
+                                            <option value="品牌设计">品牌设计</option>
+                                            <option value="空间设计">空间设计</option>
+                                            <option value="新媒体设计">新媒体设计</option>
+                                            <option value="艺术创作">艺术创作</option>
+                                            <option value="其他">其他</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>创作时间：</span>
+                                <div class="inputForm dateInput rela">
+                                    <input type="text" class="layui-input" id="dataForm" placeholder="年/月/日">
+                                    <img src="./image/person/down.png" alt="">
+                                </div>
+                            </li>
+                            <li class="isrequire">
+                                <span>作品标签：</span>
+                                <div class="inputForm">
+                                    <textarea id="sign"></textarea>
+                                    <p>提示:关键词最少三组。每组用空格分开，请包含设计稿中的元素及文字（70个字以内）</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="completePic()">提交</button>
+                </div>
+            </div>
+            <div class="cont toDeal" id="dealBox"></div>
+            <div class="cont dealPass" id="dealPassBox"></div>
+        </div>
+    </div>
+    <div id="footerBox"></div>
+</div>
+</body>
+
+<script id="deal" type="text/html">
+    {{if data.length}}
+    <p>您已上传{{data.length}}张作品，正在审核中。</p>
+    <div class="toDealBox">
+        {{each data value index}}
+        <div class="toDeal_main">
+            <div class="dealWindow">
+                <div class="imgBox">
+                    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4100138946,1788218220&fm=26&gp=0.jpg"
+                         alt="">
+                    <p>宁静的湖泊.psd</p>
+                </div>
+            </div>
+
+            {{if data.isdeal}}
+            <p class="nodeal">审核拒绝</p>
+            {{else}}
+            <p class="dealing">审核中</p>
+            {{/if}}
+            <p>上传时间：2020-07-04</p>
+        </div>
+        {{/each}}
+    </div>
+    {{else}}
+    <p class="noData">暂无数据</p>
+    {{/if}}
+</script>
+
+<script id="dealPass" type="text/html">
+    {{if data.length}}
+    <h4>审核通过了<span>“{{data.length}}”</span>张作品</h4>
+    <div class="dealPass_main">
+        <ul class="imgType_main clearfix">
+            {{each data value index}}
+            <li>
+                <div class="typeBox" data-id="{{value.id}}">
+                    <div class="imgBox">
+                        <img src="{{value.url}}" alt=""></div>
+                    <p>{{value.name}}/{{value.sourceName}}/{{value.type}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{else}}
+    <p class="noData">暂无数据</p>
+    {{/if}}
+</script>
+
+<script id="files" type="text/html">
+    {{if data}}
+    {{each data value index}}
+    <div class="originalFile rela addImg">
+        <img src="./image/login/close.png" alt="" class="abso close" onclick="deleImg(event)" data-index="{{index}}">
+        <img src="{{value.imgs}}"
+             alt="">
+        <h5>{{value.detail.name}}</h5>
+        <p>文件大小：{{value.size}}M</p>
+        {{if true}}
+        <p class="finished">上传完成</p>
+        {{else}}
+        <div class="process">
+            <div class="process_main rela">
+                <span class="abso" style="width: 40%"></span>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+
+<script>
+    var fileImg = [];
+    userInfo = window.localStorage.getItem("userInfo") && JSON.parse(window.localStorage.getItem("userInfo")).token;
+    $(function () {
+        $('#headerBox').load('common/header.html');
+        $('#footerBox').load('common/footer.html');
+
+        //选项卡切换
+        $('.category ul li').click(function () {
+            indexC = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.cont').eq(indexC).addClass('active').siblings().removeClass('active');
+        })
+
+        $.ajax({
+            url: "http://api.cc04u.cc/queryZpByStatus",
+            type: "post",
+            data: {
+                token: userInfo,
+                status: 0
+            },
+            success: function (res) {
+                $("#dealLength").text(res.data.length)
+                var items = template("deal", res);
+                $("#dealBox").html(items)
+            }
+        })
+        $.ajax({
+            url: "http://api.cc04u.cc/queryZpByStatus",
+            type: "post",
+            data: {
+                token: userInfo,
+                status: 1
+            },
+            success: function (res) {
+                $("#dealPassLength").text(res.data.length)
+                var items = template("dealPass", res);
+                $("#dealPassBox").html(items)
+            }
+        })
+
+        $("#uploadFile").on("change", function () {
+            var formData = new FormData();
+            formData.append('file', $("#uploadFile")[0].files)
+            var reader = new FileReader();
+            reader.readAsDataURL($("#uploadFile")[0].files[0])
+            var imgSize = ($("#uploadFile")[0].files[0].size / 1024 / 1024).toFixed(2)
+            reader.onload = function(e){
+                fileImg.push({
+                    imgs: e.currentTarget.result,
+                    size: imgSize,
+                    detail: $("#uploadFile")[0].files[0]
+                })
+                var items = template("files", {data: fileImg});
+                $("#filesBox").html(items)
+            }
+        })
+
+        $("#submitImg").click(function () {
+            $.ajax({
+                url: "http://api.cc04u.cc/file/upload",
+                type: "post",
+                processData: false,
+                contentType: false,
+                xhrFields: {
+                    withCredentials: true
+                },
+                data: {
+                    file: fileImg
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (data) {
+
+                }
+            })
+        })
+    })
+
+    function deleImg(e) {
+        let index = Number(e.target.dataset.index)
+        fileImg.splice(index, 1);
+        var items = template("files", {data: fileImg});
+        $("#filesBox").html(items)
+    }
+
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#dataForm' //指定元素
+        });
+    });
+
+    function completePic() {
+        // $("#fillInfos").toggleClass("show")
+        $.ajax({
+            url: "http://api.cc04u.cc/pushZp",
+            type: "post",
+            data: {
+                token: userInfo,
+                name: $("#name").val(),
+                type: $("select[name='type'] option:selected").val(),
+                subType: $("#sign").val(),
+                url: "https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1141259048,554497535&fm=26&gp=0.jpg"
+            },
+            success: function (res) {
+                console.log(res);
+            }
+        })
+
+    }
+</script>
+</html>

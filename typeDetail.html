@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>type详情</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/HappyImage.min.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <script src="./js/Sliding_Validation_Gu.js" type="text/javascript"></script>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="typeDetail">
+    <div id="headerBox"></div>
+    <div id="searchBox" class="banxin"></div>
+    <div class="typeDetail_main banxin">
+        <h4 id="title"></h4>
+        <p>素材持续更新中，分类功能持续完善，推荐使用检索功能搜索需要的素材。</p>
+        <ul class="imgType_main clearfix" id="typeListBox"></ul>
+        <div id="page"></div>
+    </div>
+    <div id="footerBox"></div>
+</div>
+<script id="typeList" type="text/html">
+    {{if data}}
+    {{each data.list value index}}
+            <li>
+                <div class="typeBox" data-id="{{value.id}}">
+                    <div class="imgBox">
+                        <img src="{{value.url}}" alt=""></div>
+                    <p>{{value.name}}/{{value.sourceName}}/{{value.type}}</p>
+                </div>
+            </li>
+    {{/each}}
+    {{/if}}
+</script>
+
+<script>
+    var page = 0, title = getQueryString("title");
+    $(function () {
+        $('#headerBox').load('common/header.html');
+        $('#footerBox').load('common/footer.html');
+        $('#searchBox').load('common/search.html');
+
+        $("#title").text(decodeURI(title))
+
+
+        $.ajax({
+            url: "http://api.cc04u.cc/pic/typelist?pageSize=12&page=" + page + "&typeName=" + decodeURI(title),
+            success: function (res) {
+                var items = template("typeList", res);
+                $("#typeListBox").html(items)
+                $(".imgType_main >li .typeBox").click(function () {
+                    let id = $(this)[0].dataset.id
+                    window.location.href = "./imgDetail.html?imgId=" + id
+                })
+                layui.use('laypage', function(){
+                    var laypage = layui.laypage;
+                    laypage.render({
+                        elem: 'page',
+                        limit: 12,
+                        count: res.data.total,
+                        jump: function(obj, first){
+                            page = obj.curr - 1
+                            if(!first){
+                                getList(page)
+                            }
+                        }
+                    });
+                });
+            }
+        })
+    })
+
+    function getList(page) {
+        $.ajax({
+            url: "http://api.cc04u.cc/pic/typelist?pageSize=12&page=" + page + "&typeName=" + decodeURI(title),
+            success: function (res) {
+                var items = template("typeList", res);
+                $("#typeListBox").html(items)
+                $(".imgType_main >li .typeBox").click(function () {
+                    let id = $(this)[0].dataset.id
+                    window.location.href = "./imgDetail.html?imgId=" + id
+                })
+            }
+        })
+    }
+</script>
+</body>
+</html>

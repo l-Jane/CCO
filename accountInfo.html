@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>账户信息</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/HappyImage.min.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <script src="./js/Sliding_Validation_Gu.js" type="text/javascript"></script>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="uploadMine accountInfo">
+    <div id="headerBox"></div>
+    <div class="uploadMine_main accountInfo_main banxin">
+        <div class="windowBox">
+            <div class="category">
+                <ul>
+                    <li class="active">个人信息</li>
+                    <li>安全设置</li>
+                </ul>
+            </div>
+            <div class="cont active personInfos">
+                <ul class="personInfos_main">
+                    <li class="isrequire">
+                        <span>昵称：</span>
+                        <div class="inputForm">
+                            <input type="text" id="nickName">
+                            <!--                            <p class="error">昵称不能为空</p>-->
+                        </div>
+                    </li>
+                    <li>
+                        <span>性别：</span>
+                        <div class="inputForm">
+                            <ul class="sex" id="sex">
+                                <li><span></span>男</li>
+                                <li><span></span>女</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>所在城市：</span>
+                        <div class="inputForm">
+                            <div class="selector" data-toggle="distpicker">
+                                <select name="province" data-province="---- 选择省 ----"></select>
+                                <select name="city" data-city="---- 选择市 ----"></select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>职业：</span>
+                        <div class="inputForm">
+                            <input type="text" id="job">
+                        </div>
+                    </li>
+                    <li>
+                        <span>QQ：</span>
+                        <div class="inputForm">
+                            <input type="text" id="qq">
+                        </div>
+                    </li>
+                </ul>
+                <button id="submit">提交</button>
+            </div>
+            <div class="cont safeSetting" id="safeSetting"></div>
+        </div>
+    </div>
+    <div id="footerBox"></div>
+    <span id="safeSetBox">绑定成功</span>
+</div>
+</body>
+
+<!--<button onclick="changeSafeBox()">换绑</button>-->
+<script id="bind" type="text/html">
+    {{if data}}
+    {{if data.res.u.phone}}
+    <div class="safeSettingBox">
+        <p>已绑定手机号：{{data.res.u.phone}}</p>
+    </div>
+    {{else}}
+    {{if data.isChangeBind}}
+    <div class="safeSetting_main">
+        <p>绑定手机号<span>（为了您的账户安全请绑定手机号）：</span></p>
+        <input type="text" id="phone">
+        <button onclick="bind()">绑定</button>
+    </div>
+    {{else}}
+    <div class="changeSettingBox">
+        <p>原绑定的手机号</p>
+        <input type="text">
+
+        <p>新绑定的手机号</p>
+        <input type="text">
+        <button onclick="changedSafeBox()">确定</button>
+    </div>
+    {{/if}}
+    {{/if}}
+    {{/if}}
+</script>
+<script>
+    var nickName, sexIndex = 0, province, city, job, qq, isChangeBind = false;
+    var userInfo = window.localStorage.getItem("userInfo") && JSON.parse(window.localStorage.getItem("userInfo")).token;
+    $(function () {
+        $('#headerBox').load('common/header.html');
+        $('#footerBox').load('common/footer.html');
+
+        //选项卡切换
+        $('.category ul li').click(function () {
+            indexC = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.cont').eq(indexC).addClass('active').siblings().removeClass('active');
+        })
+
+        $("#sex li").click(function () {
+            sexIndex = $(this).index()
+            $("#sex li").removeClass("act")
+            $(this).addClass("act")
+        })
+
+        $("#submit").click(() => {
+            nickName = $("#nickName").val()
+            province = $("select[name='province'] option:selected").val()
+            city = $("select[name='city'] option:selected").val()
+            job = $("#job").val()
+            qq = $("#qq").val()
+
+            if (!nickName) {
+                layer.msg('昵称不可为空！');
+                return
+            }
+
+            $.ajax({
+                url: "http://api.cc04u.cc/updateUserInfo",
+                type: "post",
+                data: {
+                    token: userInfo,
+                    nickName: nickName,
+                    sex: sexIndex,
+                    qqnum: qq,
+                    province: province,
+                    city: city
+                },
+                success: function (res) {
+                    window.location.href = "person.html"
+                }
+            })
+        })
+
+        $.ajax({
+            url: "http://api.cc04u.cc/getUserInfo?token=" + userInfo,
+            success: function (res) {
+                var items = template("bind", {data: {
+                        isChangeBind: isChangeBind,
+                        res: res.data
+                    }});
+                $("#safeSetting").html(items)
+            }
+        })
+
+    })
+
+    function changedSafeBox() {
+        isChangeBind = true
+    }
+
+    function bind() {
+        var phone = $("#phone").val()
+
+        if (!phone) {
+            layer.msg('手机号不可为空！');
+            return
+        }
+
+        $.ajax({
+            url: "http://api.cc04u.cc/bindmobile",
+            type: "post",
+            data: {
+                token: userInfo,
+                phone: phone
+            },
+            success: function (res) {
+                if (res.code == 0) {
+                    window.location.reload()
+                    return
+                }
+                layer.msg(res.msg);
+            }
+        })
+    }
+
+</script>
+</html>

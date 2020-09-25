@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/HappyImage.min.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <script src="./js/Sliding_Validation_Gu.js" type="text/javascript"></script>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+<div class="gameDetail">
+    <div id="headerBox"></div>
+    <div class="gameDetail_main banxin">
+        <div class="imgBox rela">
+            <img src="./image/game/u1278.svg" alt="">
+            <div class="btns abso">
+                <a href="./gameApply.html" class="btnsBox">上传作品</a>
+            </div>
+        </div>
+        <ul class="main">
+            <li>首页</li>
+            <li>赛事详情</li>
+            <li>赛事资料</li>
+            <li>全部作品</li>
+        </ul>
+        <div class="applyBox">
+            <div class="applyAtOnce">
+                <h3>填写报名信息</h3>
+                <ul class="applyAtOnce_main">
+                    <li class="clearfix isrequire">
+                        <span class="fl">姓名：</span>
+                        <input class="fr" type="text">
+                    </li>
+                    <li class="clearfix isrequire">
+                        <span class="fl">邮箱：</span>
+                        <input class="fr" type="text">
+                    </li>
+                    <li class="clearfix isrequire">
+                        <span class="fl">手机：</span>
+                        <input class="fr" type="text">
+                    </li>
+                    <li class="agree">
+                        <span class="fl"></span>
+                        <p>
+                            <span id="checkBox"></span>
+                            我已同意大赛征集所有条款
+                        </p>
+                    </li>
+                </ul>
+                <button id="apply">立即报名</button>
+            </div>
+        </div>
+    </div>
+    <div id="footerBox"></div>
+</div>
+</body>
+<script>
+$(function () {
+    $('#headerBox').load('common/header.html');
+    $('#footerBox').load('common/footer.html');
+
+    $("#apply").click(function () {
+        window.location.href = "./gameUpload.html"
+    })
+})
+</script>
+</html>
