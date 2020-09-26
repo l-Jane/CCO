@@ -1,65 +1,136 @@
-.home {
-  .home_main {
-    margin-bottom: 150px;
+@media (min-width: 376px) {
+  .home {
+    .home_main {
+      margin-bottom: 150px;
 
-    .imgBox {
-      width: 100%;
-
-      li {
+      .imgBox {
         width: 100%;
-        position: relative;
 
-        .title {
-          width: 360px;
-          height: 25px;
-          margin: 60px auto 0 auto;
+        li {
+          width: 100%;
           position: relative;
 
-          .titleLine {
-            width: 100%;
-            height: 1px;
-            background: #343434;
+          .title {
+            width: 360px;
+            height: 25px;
+            margin: 60px auto 0 auto;
+            position: relative;
+
+            .titleLine {
+              width: 100%;
+              height: 1px;
+              background: #343434;
+            }
+
+            h3 {
+              position: absolute;
+              font-size: 17px;
+              font-weight: 400;
+              color: #343434;
+              letter-spacing: 1px;
+              background: #fff;
+              padding: 0 20px;
+              left: 50%;
+              top: -52%;
+              transform: translateX(-50%);
+              margin: 0;
+
+              img {
+                width: 18px;
+                height: 24px;
+                vertical-align: -5px;
+                margin-right: 8px;
+              }
+            }
           }
 
-          h3 {
-            position: absolute;
-            font-size: 17px;
-            font-weight: 400;
-            color: #343434;
-            letter-spacing: 1px;
-            background: #fff;
-            padding: 0 20px;
-            left: 50%;
-            top: -52%;
-            transform: translateX(-50%);
-            margin: 0;
+          .imgFireBox {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
 
             img {
-              width: 18px;
-              height: 24px;
-              vertical-align: -5px;
-              margin-right: 8px;
+              width: 100%;
+              height: 100%;
+              display: block;
             }
           }
         }
 
-        .imgFireBox {
-          width: 100%;
-          height: 350px;
-          border-radius: 10px;
-          overflow: hidden;
-
-          img {
-            width: 100%;
-            height: 100%;
-            display: block;
-          }
-        }
       }
-
     }
   }
+
 }
+
+@media (max-width: 375px) {
+  .home {
+    .home_main {
+      width: 100%!important;
+
+      .imgBox {
+        width: 100%;
+
+        li {
+          width: 100%;
+          position: relative;
+
+          .title {
+            width: 90%;
+            height: 25px;
+            margin: 15vw auto 0 auto;
+            position: relative;
+
+            .titleLine {
+              width: 100%;
+              height: 1px;
+              background: #343434;
+            }
+
+            h3 {
+              position: absolute;
+              font-size: 3.74vw;
+              font-weight: 400;
+              color: #343434;
+              letter-spacing: 1px;
+              background: #fff;
+              padding: 0 20px;
+              left: 50%;
+              top: -45%;
+              transform: translateX(-50%);
+              margin: 0;
+
+              img {
+                width: 15px;
+                height: 20px;
+                vertical-align: -5px;
+                margin-right: 8px;
+              }
+            }
+          }
+
+          .imgFireBox {
+            width: 90%;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 auto;
+
+            img {
+              width: 100%;
+              height: 100%;
+              display: block;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
 
 .album {
   .album_main {

@@ -26,14 +26,12 @@
 <body>
 <div class="home">
     <div id="headerBox"></div>
-    <div class="banxin">
-        <div class="navSearchBox">
-            <div class="navSearch rela">
-                <div class="searchBox abso" onclick="toPages()">
-                    <img class="center" src="./image/home/search.png" alt="">
-                </div>
-                <input type="text" placeholder="搜索CC0素材、设计师作品" class="inputSearch" id="inputSearch">
+    <div class="navSearchBox">
+        <div class="navSearch rela">
+            <div class="searchBox abso" onclick="toPages()">
+                <img class="center" src="./image/home/search.png" alt="">
             </div>
+            <input type="text" placeholder="搜索CC0素材、设计师作品" class="inputSearch" id="inputSearch">
         </div>
     </div>
     <div class="home_main banxin">
@@ -97,6 +95,7 @@
         let url = e.target.dataset.url
         window.location.href = url
     }
+
     function jumpMessage(e) {
         let id = e.target.dataset.id
         window.location.href = "./messageDetail.html?newsId=" + id

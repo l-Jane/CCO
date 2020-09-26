@@ -196,7 +196,7 @@
   }
 
   .navSearchBox {
-    width: calc(1080px - 350px);
+    width: 730px;
     margin: 8px auto 0 auto;
 
     .navSearch {
@@ -244,6 +244,69 @@
 
       p {
         display: inline-block;
+      }
+    }
+  }
+
+  .footer {
+    height: 100%;
+    background: #F5F5F5;
+    padding-bottom: 25px;
+
+    p {
+      font-size: 12px;
+      line-height: 18px;
+      color: #999999;
+    }
+
+    h4 {
+      color: #999999;
+      text-align: center;
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 45px;
+    }
+
+    .footer_main {
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+
+      .footIcon {
+        width: 70px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+          width: 70px;
+          height: 55px;
+          display: block;
+        }
+      }
+
+      .footLink {
+        width: calc(100% - 350px);
+        height: 100%;
+        line-height: 90px;
+        display: flex;
+        justify-content: space-between;
+
+        > li {
+          a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            color: #666666;
+            font-size: 13px;
+            font-weight: 500;
+          }
+
+          a:hover {
+            color: #333333;
+          }
+        }
       }
     }
   }
@@ -337,8 +400,8 @@
   }
 
   .navSearchBox {
-    width: calc(1080px - 350px);
-    margin: 8px auto 0 auto;
+    width: 80%;
+    margin: 5.34vw auto;
 
     .navSearch {
       width: 100%;
@@ -347,7 +410,7 @@
       background: #F6F7F9;
 
       .searchBox {
-        width: 80px;
+        width: 35px;
         height: 100%;
         top: 0;
         right: 0;
@@ -355,8 +418,8 @@
         border-radius: 40px;
 
         img {
-          width: 18px;
-          height: 18px;
+          width: 15px;
+          height: 15px;
           display: block;
         }
       }
@@ -389,6 +452,59 @@
     }
   }
 
+  .footer {
+    height: 100%;
+    background: #F5F5F5;
+    padding: 6vw 0;
+    margin-top: 10vw;
+
+    p {
+      font-size: 3.2vw;
+      line-height: 6vw;
+      color: #999999;
+      padding: 0 4vw;
+    }
+
+    h4 {
+      color: #999999;
+      text-align: center;
+      font-weight: 400;
+      font-size: 3.2vw;
+      transform: scale(.9);
+    }
+    >div {
+      width: 100% !important;
+    }
+    .footer_main {
+      .footIcon {
+        display: none;
+      }
+
+      .footLink {
+        width: 100%;
+        line-height: 8vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4vw;
+
+        > li {
+          a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            color: #666666;
+            font-size: 3.2vw;
+            font-weight: 500;
+            transform: scale(.9);
+          }
+
+          a:hover {
+            color: #333333;
+          }
+        }
+      }
+    }
+  }
 }
 .nav.searchNav {
   .loginBox {
@@ -400,71 +516,6 @@
   }
 }
 
-
-
-
-.footer {
-  height: 100%;
-  background: #F5F5F5;
-  padding-bottom: 25px;
-
-  p {
-    font-size: 12px;
-    line-height: 18px;
-    color: #999999;
-  }
-
-  h4 {
-    color: #999999;
-    text-align: center;
-    font-weight: 400;
-    font-size: 13px;
-    margin-top: 45px;
-  }
-
-  .footer_main {
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-
-    .footIcon {
-      width: 70px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      img {
-        width: 70px;
-        height: 55px;
-        display: block;
-      }
-    }
-
-    .footLink {
-      width: calc(100% - 350px);
-      height: 100%;
-      line-height: 90px;
-      display: flex;
-      justify-content: space-between;
-
-      > li {
-        a {
-          width: 100%;
-          height: 100%;
-          display: block;
-          color: #666666;
-          font-size: 13px;
-          font-weight: 500;
-        }
-
-        a:hover {
-          color: #333333;
-        }
-      }
-    }
-  }
-}
 
 .line {
   width: 100%;

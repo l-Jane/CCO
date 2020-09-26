@@ -35,14 +35,14 @@
 </body>
 <script id="source" type="text/html">
     {{if data}}
-        {{each data value}}
-            <li data-type="{{value.sourceName}}">
-                <div class="mask">
-                    <p>{{value.sourceName}}</p>
-                </div>
-                <img src="{{value.url}}" alt="">
-            </li>
-        {{/each}}
+    {{each data value}}
+    <li data-type="{{value.sourceName}}">
+        <div class="mask">
+            <p>{{value.sourceName}}</p>
+        </div>
+        <img src="{{value.url}}" alt="">
+    </li>
+    {{/each}}
     {{/if}}
 </script>
 <script>

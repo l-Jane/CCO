@@ -37,13 +37,13 @@
 <script id="typeList" type="text/html">
     {{if data}}
     {{each data.list value index}}
-            <li>
-                <div class="typeBox" data-id="{{value.id}}">
-                    <div class="imgBox">
-                        <img src="{{value.url}}" alt=""></div>
-                    <p>{{value.name}}/{{value.sourceName}}/{{value.type}}</p>
-                </div>
-            </li>
+    <li>
+        <div class="typeBox" data-id="{{value.id}}">
+            <div class="imgBox">
+                <img src="{{value.url}}" alt=""></div>
+            <p>{{value.name}}/{{value.sourceName}}/{{value.type}}</p>
+        </div>
+    </li>
     {{/each}}
     {{/if}}
 </script>
@@ -66,15 +66,15 @@
                     let id = $(this)[0].dataset.id
                     window.location.href = "./imgDetail.html?imgId=" + id
                 })
-                layui.use('laypage', function(){
+                layui.use('laypage', function () {
                     var laypage = layui.laypage;
                     laypage.render({
                         elem: 'page',
                         limit: 12,
                         count: res.data.total,
-                        jump: function(obj, first){
+                        jump: function (obj, first) {
                             page = obj.curr - 1
-                            if(!first){
+                            if (!first) {
                                 getList(page)
                             }
                         }

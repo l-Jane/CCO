@@ -1,45 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89cd8710-19f4-4490-8575-243326396514" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/FAQ.html" beforeDir="false" afterPath="$PROJECT_DIR$/FAQ.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutUs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/accountInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/album.html" beforeDir="false" afterPath="$PROJECT_DIR$/album.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/allSource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allType.html" beforeDir="false" afterPath="$PROJECT_DIR$/allType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/connectUs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/copyright.html" beforeDir="false" afterPath="$PROJECT_DIR$/copyright.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/common.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/common.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/design.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameApply.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameApply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameUpload.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameUpload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameWall.html" beforeDir="false" afterPath="$PROJECT_DIR$/gameWall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/imgDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messageDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/messageDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myAttention.html" beforeDir="false" afterPath="$PROJECT_DIR$/myAttention.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myCollect.html" beforeDir="false" afterPath="$PROJECT_DIR$/myCollect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myFans.html" beforeDir="false" afterPath="$PROJECT_DIR$/myFans.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineMall.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineMall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/person.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/privacyProtocol.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacyProtocol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registerAtOnce.html" beforeDir="false" afterPath="$PROJECT_DIR$/registerAtOnce.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registerList.html" beforeDir="false" afterPath="$PROJECT_DIR$/registerList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/searchPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourceDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/sourceDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadMine.html" beforeDir="false" afterPath="$PROJECT_DIR$/uploadMine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userProtocol.html" beforeDir="false" afterPath="$PROJECT_DIR$/userProtocol.html" afterDir="false" />
-    </list>
+    <list default="true" id="89cd8710-19f4-4490-8575-243326396514" name="默认更改列表" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,24 +68,6 @@
     <configuration>$USER_HOME$/.subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="89cd8710-19f4-4490-8575-243326396514" name="默认更改列表" comment="" />
@@ -133,6 +77,7 @@
       <updated>1600928330976</updated>
       <workItem from="1600928333935" duration="2000" />
       <workItem from="1600956340953" duration="6057000" />
+      <workItem from="1601042769780" duration="2891000" />
     </task>
     <servers />
   </component>

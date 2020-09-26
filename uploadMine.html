@@ -253,7 +253,7 @@
             var reader = new FileReader();
             reader.readAsDataURL($("#uploadFile")[0].files[0])
             var imgSize = ($("#uploadFile")[0].files[0].size / 1024 / 1024).toFixed(2)
-            reader.onload = function(e){
+            reader.onload = function (e) {
                 fileImg.push({
                     imgs: e.currentTarget.result,
                     size: imgSize,

@@ -32,24 +32,24 @@
 </body>
 <script id="game" type="text/html">
     {{if data}}
-        {{each data value index}}
-        <li>
-            <img src="{{value.pic}}" alt="">
-            <div class="imgBrief rela">
-                <h5>{{value.title}}</h5>
-                <p>{{value.startTime}}</p>
-                {{if value.canused == 0}}
-                    <span class="zjz abso">征集中</span>
-                {{else if value.canused == 1}}
-                <span class="yjs abso">已结束</span>
-                {{else if value.canused == 2}}
-                <span class="psz abso">评审中</span>
-                {{else}}
-                    <span class="hjgs abso">获奖公示</span>
-                {{/if}}
-            </div>
-        </li>
-        {{/each}}
+    {{each data value index}}
+    <li>
+        <img src="{{value.pic}}" alt="">
+        <div class="imgBrief rela">
+            <h5>{{value.title}}</h5>
+            <p>{{value.startTime}}</p>
+            {{if value.canused == 0}}
+            <span class="zjz abso">征集中</span>
+            {{else if value.canused == 1}}
+            <span class="yjs abso">已结束</span>
+            {{else if value.canused == 2}}
+            <span class="psz abso">评审中</span>
+            {{else}}
+            <span class="hjgs abso">获奖公示</span>
+            {{/if}}
+        </div>
+    </li>
+    {{/each}}
     {{/if}}
 </script>
 

@@ -162,10 +162,12 @@
         $.ajax({
             url: "http://api.cc04u.cc/getUserInfo?token=" + userInfo,
             success: function (res) {
-                var items = template("bind", {data: {
+                var items = template("bind", {
+                    data: {
                         isChangeBind: isChangeBind,
                         res: res.data
-                    }});
+                    }
+                });
                 $("#safeSetting").html(items)
             }
         })
