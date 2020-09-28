@@ -97,28 +97,53 @@
 
     $(function () {
         layui.use('layer', function () {
-            if (!userInfo) {
-                var items = template("header", {});
-                $("#headerBox").html(items)
-                currentPage()
-            } else {
+            var token = getQueryString("token")
+            if (token) {
                 $.ajax({
-                    url: "http://api.cc04u.cc/getUserInfo?token=" + userInfo,
+                    url: "http://api.cc04u.cc/getUserInfo?token=" + token,
                     success: function (res) {
-                        var items = template("headerLogined", res);
-                        $("#headerBox").html(items)
-                        currentPage()
-                        $("#loginOut").click(() => {
-                            window.localStorage.removeItem("userInfo");
-                            window.location.href = "index.html"
-                        })
-                        $(".headImg >img").click(function () {
-                            window.location.href = "./person.html"
-                        })
+                        if (res.code == 0) {
+                            window.localStorage.setItem("userInfo", JSON.stringify({
+                                token: token,
+                                u: JSON.stringify(res.data.u)
+                            }))
+
+                            var items = template("headerLogined", res);
+                            $("#headerBox").html(items)
+                            currentPage()
+                            $("#loginOut").click(() => {
+                                window.localStorage.removeItem("userInfo");
+                                window.location.href = "index.html"
+                            })
+                            $(".headImg >img").click(function () {
+                                window.location.href = "./person.html"
+                            })
+                        }
                     }
                 })
+            } else {
+                if (!userInfo) {
+                    var items = template("header", {});
+                    $("#headerBox").html(items)
+                    currentPage()
+                } else {
+                    $.ajax({
+                        url: "http://api.cc04u.cc/getUserInfo?token=" + userInfo,
+                        success: function (res) {
+                            var items = template("headerLogined", res);
+                            $("#headerBox").html(items)
+                            currentPage()
+                            $("#loginOut").click(() => {
+                                window.localStorage.removeItem("userInfo");
+                                window.location.href = "index.html"
+                            })
+                            $(".headImg >img").click(function () {
+                                window.location.href = "./person.html"
+                            })
+                        }
+                    })
+                }
             }
-
 
             $('.loginWeb').on('click', function () {
                 openLogin()
@@ -159,7 +184,7 @@
                 '                    <img src="./image/login/weixin.png" alt="">\n' +
                 '                    <p class="weixin">微信登录</p>\n' +
                 '                </li>\n' +
-                '                <li onclick="showMsg()">\n' +
+                '                <li onclick="qqLoginIn()">\n' +
                 '                    <img src="./image/login/qq.png" alt="">\n' +
                 '                    <p class="qq">QQ登录</p>\n' +
                 '                </li>\n' +
@@ -322,7 +347,7 @@
                 '                <img src="./image/login/weixin.png" alt="">\n' +
                 '                <p class="weixin">微信注册</p>\n' +
                 '            </li>\n' +
-                '            <li onclick="showMsg()">\n' +
+                '            <li onclick="qqLoginIn()">\n' +
                 '                <img src="./image/login/qq.png" alt="">\n' +
                 '                <p class="qq">QQ注册</p>\n' +
                 '            </li>\n' +
@@ -564,6 +589,10 @@
 
     function showMsg() {
         layer.msg("功能开发中");
+    }
+
+    function qqLoginIn() {
+        window.location.href = "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101494335&redirect_uri=https://rs.resouxs.com/qq/pccallback&state=PCSTAT"
     }
 </script>
 </body>
