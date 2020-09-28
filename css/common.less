@@ -84,7 +84,6 @@
       }
     }
   }
-
   .nav.searchNav {
     .navList {
       width: 600px!important;
@@ -99,7 +98,6 @@
       display: flex;
     }
   }
-
   .loginBoxed {
     display: none;
     width: 320px;
@@ -194,7 +192,6 @@
       }
     }
   }
-
   .navSearchBox {
     width: 730px;
     margin: 8px auto 0 auto;
@@ -247,7 +244,6 @@
       }
     }
   }
-
   .footer {
     height: 100%;
     background: #F5F5F5;
@@ -310,7 +306,6 @@
       }
     }
   }
-
   .img_main {
     width: 100%;
     display: flex;
@@ -364,6 +359,54 @@
       margin-right: 0;
     }
   }
+  .imgType_main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    li {
+      width: calc((100% - 50px) / 3);
+      margin: 0 25px 20px 0;
+      position: relative;
+
+      .typeBox {
+        width: 100%;
+        margin-bottom: 28px;
+
+        .imgBox {
+
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        p {
+          color: #444444;
+          font-size: 12px;
+          line-height: 22px;
+          margin-top: 15px;
+        }
+      }
+
+      .typeBox:hover {
+        .imgBox {
+          opacity: .8;
+        }
+
+        p {
+          color: #FE8F19;
+        }
+      }
+
+    }
+
+    li:nth-child(3n) {
+      margin-right: 0;
+    }
+
+  }
 
 }
 
@@ -388,7 +431,6 @@
       }
     }
   }
-
   .loginBoxed {
     display: none;
     width: 320px;
@@ -453,7 +495,6 @@
       }
     }
   }
-
   .navSearchBox {
     width: 90%;
     margin: 5.34vw auto;
@@ -507,7 +548,6 @@
       }
     }
   }
-
   .footer {
     height: 100%;
     background: #F5F5F5;
@@ -561,7 +601,6 @@
       }
     }
   }
-
   .img_main {
     width: 100%;
 
@@ -612,6 +651,45 @@
       margin-right: 0;
     }
   }
+  .imgType_main {
+    width: 100%;
+
+    li {
+      width: 100%;
+
+      .typeBox {
+        width: 100%;
+        margin-bottom: 28px;
+
+        .imgBox {
+
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        p {
+          color: #444444;
+          font-size: 3.2vw;
+          line-height: 5.8vw;
+          margin-top: 4vw;
+        }
+      }
+
+      .typeBox:hover {
+        .imgBox {
+          opacity: .8;
+        }
+
+        p {
+          color: #FE8F19;
+        }
+      }
+
+    }
+
+  }
 
 }
 .nav.searchNav {
@@ -626,94 +704,6 @@
 
 
 
-.imgType_main {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  li {
-    width: calc((100% - 50px) / 3);
-    margin-bottom: 20px;
-    position: relative;
-
-    .typeBox {
-      margin-bottom: 28px;
-
-      .imgBox {
-
-        img {
-          width: 100%;
-          display: block;
-        }
-      }
-
-      p {
-        color: #444444;
-        font-size: 12px;
-        line-height: 22px;
-        margin-top: 15px;
-      }
-    }
-
-    .typeBox:hover {
-      .imgBox {
-        opacity: .8;
-      }
-    }
-
-  }
-
-}
-
-.imgType_main {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
-  li {
-    width: calc((100% - 50px) / 3);
-    margin: 0 25px 20px 0;
-    position: relative;
-
-    .typeBox {
-      width: 100%;
-      margin-bottom: 28px;
-
-      .imgBox {
-
-        img {
-          width: 100%;
-          display: block;
-        }
-      }
-
-      p {
-        color: #444444;
-        font-size: 12px;
-        line-height: 22px;
-        margin-top: 15px;
-      }
-    }
-
-    .typeBox:hover {
-      .imgBox {
-        opacity: .8;
-      }
-
-      p {
-        color: #FE8F19;
-      }
-    }
-
-  }
-
-  li:nth-child(3n) {
-    margin-right: 0;
-  }
-
-}
 
 
 //注册相关
