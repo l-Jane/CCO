@@ -1,3 +1,14 @@
+@media (min-width: 376px) {
+  .banxin {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 375px) {
+  .banxin {
+    width: 100%;
+  }
+}
 /*初始化*/
 * {
   margin: 0;
@@ -41,10 +52,6 @@ ul,li,ol {
 }
 
 /*公共样式*/
-.banxin {
-  width: 1000px;
-  margin: 0 auto;
-}
 .center {
   position: absolute;
   left: 50%;

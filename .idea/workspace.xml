@@ -12,6 +12,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -44,7 +45,7 @@
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -77,7 +78,9 @@
       <updated>1600928330976</updated>
       <workItem from="1600928333935" duration="2000" />
       <workItem from="1600956340953" duration="6057000" />
-      <workItem from="1601042769780" duration="2891000" />
+      <workItem from="1601042769780" duration="2912000" />
+      <workItem from="1601088702062" duration="709000" />
+      <workItem from="1601100784911" duration="9033000" />
     </task>
     <servers />
   </component>
