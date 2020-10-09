@@ -17,7 +17,8 @@
                 <a href="./index.html" class="navIcon navbar-brand">
                     <img src="./image/logo.png" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -51,7 +52,8 @@
                 <a href="./index.html" class="navIcon navbar-brand">
                     <img src="./image/logo.png" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -69,7 +71,8 @@
                         <div class="searchInput">
                             <div class="searchInput_main rela">
                                 <img class="abso" src="./image/imgs/search.png" alt="">
-                                <input type="text" placeholder="搜索免费版权CC0图片" class="inputSearch" onfocus="window.location.href = 'searchPage.html?keys='">
+                                <input type="text" placeholder="搜索免费版权CC0图片" class="inputSearch"
+                                       onfocus="window.location.href = 'searchPage.html?keys='">
                             </div>
                         </div>
                         <div class="headImg rela">
@@ -153,10 +156,11 @@
             });
         })
     })
+
     function currentPage() {
-        if(currentName === "index") {
+        if (currentName === "index") {
             $(".navList >li:eq(0)").addClass("act")
-        } else if(currentName === "album" || currentName === "allSource" || currentName === "sourceDetail" || currentName === "imgDetail" || currentName === "allType" || currentName === "typeDetail") {
+        } else if (currentName === "album" || currentName === "allSource" || currentName === "sourceDetail" || currentName === "imgDetail" || currentName === "allType" || currentName === "typeDetail") {
             $(".navList >li:eq(1)").addClass("act")
         } else if (currentName === "design") {
             $(".navList >li:eq(2)").addClass("act")
@@ -173,7 +177,7 @@
     function openLogin() {
         login = layer.open({
             type: 1,
-            area: ['550px', 'auto'],
+            area: ['auto', 'auto'],
             shade: 0.3,
             shadeClose: false, //点击遮罩关闭
             content: '<div id="loginBox">\n' +
@@ -197,16 +201,18 @@
                 '        </div>'
         });
     }
+
     function closeLogin() {
         layer.close(login)
     }
 
     // 手机验证码登录弹窗 显示隐藏
     var phoneClick = true, isPhoneValidate = false, second = 60;
+
     function openPhoneLogin() {
         phoneLogin = layer.open({
             type: 1,
-            area: ['550px', 'auto'],
+            area: ['auto', 'auto'],
             shade: 0.3,
             shadeClose: false, //点击遮罩关闭
             content: '<div id="phoneLoginBox">\n' +
@@ -248,13 +254,14 @@
             isPhoneValidate = true
         });
     }
+
     function phoneSendCode() {
         if (!phoneClick) return;
         if (!$("#phoneNum").val() || $("#phoneNum").val().length < 11) {
             layer.msg('输入11位手机号');
             return;
         }
-        if(!isPhoneValidate) {
+        if (!isPhoneValidate) {
             layer.msg('尚未验证');
             return
         }
@@ -289,19 +296,21 @@
             }
         })
     }
+
     function closePhoneLogin() {
         layer.close(phoneLogin)
     }
+
     function phoneLoginEvent() {
         if (!$("#phoneNum").val() || $("#phoneNum").val().length < 11) {
             layer.msg('输入11位手机号');
             return;
         }
-        if(!isPhoneValidate) {
+        if (!isPhoneValidate) {
             layer.msg('尚未验证');
             return
         }
-        if(!$("#codeInput").val() || $("#codeInput").val().length < 6) {
+        if (!$("#codeInput").val() || $("#codeInput").val().length < 6) {
             layer.msg('输入6位验证码');
             return
         }
@@ -328,6 +337,7 @@
             }
         })
     }
+
     function phoneLoginChoiceCheck() {
         $("#phoneLoginCheckBox").toggleClass("checkBox")
     }
@@ -336,7 +346,7 @@
     function openRegister() {
         register = layer.open({
             type: 1,
-            area: ['550px', 'auto'],
+            area: ['auto', 'auto'],
             shade: 0.3,
             shadeClose: false, //点击遮罩关闭
             content: '<div id="registBox">\n' +
@@ -369,19 +379,22 @@
                 '    </div>'
         });
     }
+
     function closeRegister() {
         layer.close(register)
     }
+
     function registChoiceCheck() {
         $("#registerCheckBox").toggleClass("checkBox")
     }
 
     // 手机注册弹窗 显示隐藏
     var phoneRegistClick = true, isPhoneRegistValidate = false, registSecond = 60;
+
     function openPhoneRegist() {
         phoneRegist = layer.open({
             type: 1,
-            area: ['550px', 'auto'],
+            area: ['auto', 'auto'],
             shade: 0.3,
             shadeClose: false, //点击遮罩关闭
             content: '<div id="phoneRegisterBox">\n' +
@@ -423,13 +436,14 @@
             isPhoneRegistValidate = true
         });
     }
+
     function phoneRegistSendCode() {
         if (!phoneRegistClick) return;
         if (!$("#registPhone").val() || $("#registPhone").val().length < 11) {
             layer.msg('输入11位手机号');
             return;
         }
-        if(!isPhoneRegistValidate) {
+        if (!isPhoneRegistValidate) {
             layer.msg('尚未验证');
             return
         }
@@ -464,17 +478,18 @@
             }
         })
     }
+
     function phoneRegistEvent() {
         // closeRegister();closePhoneRegist()
         if (!$("#registPhone").val() || $("#registPhone").val().length < 11) {
             layer.msg('输入11位手机号');
             return;
         }
-        if(!isPhoneRegistValidate) {
+        if (!isPhoneRegistValidate) {
             layer.msg('尚未验证');
             return
         }
-        if(!$("#codeRegistInput").val() || $("#codeRegistInput").val().length < 6) {
+        if (!$("#codeRegistInput").val() || $("#codeRegistInput").val().length < 6) {
             layer.msg('输入6位验证码');
             return
         }
@@ -501,9 +516,11 @@
             }
         })
     }
+
     function closePhoneRegist() {
         layer.close(phoneRegist)
     }
+
     function phoneRegistChoiceCheck() {
         $("#phoneRegistCheckBox").toggleClass("checkBox")
     }
@@ -514,7 +531,7 @@
         return
         company = layer.open({
             type: 1,
-            area: ['550px', 'auto'],
+            area: ['auto', 'auto'],
             shade: 0.3,
             shadeClose: false, //点击遮罩关闭
             content: '<div id="companyBox">\n' +
@@ -580,9 +597,11 @@
             $('[data-toggle="distpicker"]').distpicker();
         });
     }
+
     function closeCompany() {
         layer.close(company)
     }
+
     function companyChoiceCheck() {
         $("#companyCheckBox").toggleClass("checkBox")
     }

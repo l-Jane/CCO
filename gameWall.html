@@ -70,6 +70,19 @@
             url: "http://api.cc04u.cc/news/list?page=0&pageSize=1",
             success: function (res) {
                 var items = template("game", res);
+                // var items = template("game", {
+                //     data: [{
+                //         pic: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2214279671,1299042480&fm=26&gp=0.jpg",
+                //         title: "123",
+                //         startTime: "2020-10-08",
+                //         canused: 0
+                //     },{
+                //         pic: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2214279671,1299042480&fm=26&gp=0.jpg",
+                //         title: "456",
+                //         startTime: "2020-10-08",
+                //         canused: 1
+                //     }]
+                // });
                 $("#gameBox").html(items)
                 $(".gameWall_main li").click(function () {
                     window.location.href = "./gameDetail.html"

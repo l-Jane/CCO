@@ -74,7 +74,15 @@
         $.ajax({
             url: "http://api.cc04u.cc/myCollect?token=" + userInfo,
             success: function (res) {
-                var items = template("collect", res);
+                // var items = template("collect", res);
+                var items = template("collect", {
+                    data: [{
+                        url: "https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2057588226,2402156864&fm=111&gp=0.jpg",
+                        name: "123",
+                        sourceName: "345",
+                        type: "type"
+                    }]
+                });
                 $("#collectBox").html(items)
             }
         })
