@@ -56,6 +56,13 @@ function getQueryString(name){
 }
 
 
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?87b37c9bab72290dde298a83bb23ef7c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 
 
 
