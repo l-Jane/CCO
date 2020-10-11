@@ -129,6 +129,9 @@
     flex-direction: column;
     justify-content: center;
   }
+  .loginBoxed .headImg #wap {
+    display: none;
+  }
   .loginBoxed .headImg img {
     width: 35px;
     height: 35px;
@@ -203,6 +206,7 @@
   }
   .navSearchBox > .keys p {
     display: inline-block;
+    cursor: pointer;
   }
   .footer {
     height: 100%;
@@ -931,6 +935,9 @@
     flex-direction: column;
     justify-content: center;
   }
+  .loginBoxed .headImg #pc {
+    display: none;
+  }
   .loginBoxed .headImg img {
     width: 35px;
     height: 35px;
@@ -985,6 +992,7 @@
   .navSearchBox > .keys p {
     display: inline-block;
     margin-bottom: 0;
+    cursor: pointer;
   }
   .footer {
     height: 100%;
@@ -1629,11 +1637,23 @@
   #page .layui-laypage .layui-laypage-prev {
     color: #F8B806 !important;
   }
+  .headImg_main {
+    margin: 1rem 3rem;
+    line-height: 12vw;
+    text-align: center;
+  }
+  .headImg_main li a {
+    font-size: 4.8vw;
+    color: #343434;
+  }
 }
 .nav.searchNav .loginBox {
   display: none;
 }
 .nav.searchNav .loginBoxed {
   display: flex;
+}
+#navInputBox.none {
+  display: none;
 }
 /*# sourceMappingURL=common.css.map */

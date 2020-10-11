@@ -69,14 +69,15 @@
 
                     <div class="loginBoxed">
                         <div class="searchInput">
-                            <div class="searchInput_main rela">
+                            <div class="searchInput_main rela" id="navInputBox">
                                 <img class="abso" src="./image/imgs/search.png" alt="">
                                 <input type="text" placeholder="搜索免费版权CC0图片" class="inputSearch"
                                        onfocus="window.location.href = 'searchPage.html?keys='">
                             </div>
                         </div>
                         <div class="headImg rela">
-                            <img src="{{data.u.headPic}}" alt="">
+                            <img src="{{data.u.headPic}}" alt="" id="wap">
+                            <img src="{{data.u.headPic}}" alt="" id="pc">
                             <ul class="headImg_main abso">
                                 <li><a href="./person.html">个人主页</a></li>
                                 <li><a href="./myCollect.html">我的收藏</a></li>
@@ -118,7 +119,10 @@
                                 window.localStorage.removeItem("userInfo");
                                 window.location.href = "index.html"
                             })
-                            $(".headImg >img").click(function () {
+                            $("#wap").click(function () {
+                                jumpPerson()
+                            })
+                            $("#pc").click(function () {
                                 window.location.href = "./person.html"
                             })
                         }
@@ -140,7 +144,10 @@
                                 window.localStorage.removeItem("userInfo");
                                 window.location.href = "index.html"
                             })
-                            $(".headImg >img").click(function () {
+                            $("#wap").click(function () {
+                                jumpPerson()
+                            })
+                            $("#pc").click(function () {
                                 window.location.href = "./person.html"
                             })
                         }
@@ -158,6 +165,9 @@
     })
 
     function currentPage() {
+        if (currentName === "index" || currentName === "album" || currentName === "allSource" || currentName === "sourceDetail" || currentName === "imgDetail" || currentName === "allType" || currentName === "typeDetail" || currentName === "design") {
+            $("#navInputBox").addClass('none')
+        }
         if (currentName === "index") {
             $(".navList >li:eq(0)").addClass("act")
         } else if (currentName === "album" || currentName === "allSource" || currentName === "sourceDetail" || currentName === "imgDetail" || currentName === "allType" || currentName === "typeDetail") {
@@ -173,6 +183,28 @@
         }
     }
 
+    function jumpPerson() {
+        person = layer.open({
+            type: 1,
+            area: ['auto', 'auto'],
+            shade: 0.3,
+            closeBtn: 0,
+            shadeClose: true,
+            content: '<ul class="headImg_main" id="toastPerson">\n' +
+                '<li><a href="./person.html">个人主页</a></li>\n' +
+                '<li><a href="./myCollect.html">我的收藏</a></li>\n' +
+                '<li><a href="./uploadMine.html">上传原创</a></li>\n' +
+                '<li><a href="./accountInfo.html">账户资料</a></li>\n' +
+                '<li><a href="#" id="loginOut">退出登录</a></li>\n' +
+                '</ul>',
+            success: function () {
+                $("#toastPerson").on('click',"#loginOut",function(){
+                    window.localStorage.removeItem("userInfo");
+                    window.location.href = "index.html"
+                });
+            }
+        });
+    }
     // 登录弹窗 显示隐藏
     function openLogin() {
         login = layer.open({

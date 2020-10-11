@@ -29,6 +29,7 @@
     <div class="themeDetail_main banxin">
         <h4>全部素材来源</h4>
         <ul class="img_main clearfix" id="typeBox"></ul>
+        <div id="page"></div>
     </div>
     <div id="footerBox"></div>
 </div>
@@ -46,13 +47,45 @@
     {{/if}}
 </script>
 <script>
+    var page = 0;
     $(function () {
         $('#headerBox').load('common/header.html');
         $('#footerBox').load('common/footer.html');
         $('#searchBox').load('common/search.html');
 
         $.ajax({
-            url: "http://api.cc04u.cc/pic/allType",
+            url: "http://api.cc04u.cc/pic/allType?pageSize=12&page=" + page,
+            success: function (res) {
+                // console.log(res);
+                // return
+                var items = template("type", res);
+                $("#typeBox").html(items)
+                $(".img_main li").click(function () {
+                    let title = $(this)[0].dataset.type
+                    window.location.href = "./typeDetail.html?title=" + encodeURI(title)
+                })
+
+                // layui.use('laypage', function () {
+                //     var laypage = layui.laypage;
+                //     laypage.render({
+                //         elem: 'page',
+                //         limit: 12,
+                //         count: res.data.total,
+                //         jump: function (obj, first) {
+                //             page = obj.curr - 1
+                //             if (!first) {
+                //                 getList(page)
+                //             }
+                //         }
+                //     });
+                // });
+            }
+        })
+    })
+
+    function getList(page) {
+        $.ajax({
+            url: "http://api.cc04u.cc/pic/allType?pageSize=12&page=" + page,
             success: function (res) {
                 var items = template("type", res);
                 $("#typeBox").html(items)
@@ -62,6 +95,6 @@
                 })
             }
         })
-    })
+    }
 </script>
 </html>

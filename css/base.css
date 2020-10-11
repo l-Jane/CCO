@@ -13,12 +13,6 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout:none;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
   box-sizing: border-box;
 }
 
@@ -30,7 +24,6 @@ body {
 
 input, button,textarea{
   border: none;
-  user-select: text;
   outline:none;
 }
 select {
