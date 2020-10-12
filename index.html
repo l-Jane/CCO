@@ -102,6 +102,13 @@
         window.location.href = "./messageDetail.html?newsId=" + id
     }
 
+
+    $('#inputSearch').bind('keypress',function(event){
+        if(event.keyCode == "13"){
+            toPages()
+        }
+    });
+
     function toPages() {
         if (!$("#inputSearch").val()) {
             layer.msg('关键词不可为空！');
