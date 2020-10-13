@@ -60,6 +60,9 @@
         $.ajax({
             url: "http://api.cc04u.cc/pic/sourcelist?pageSize=12&page=" + page + "&sourceName=" + decodeURI(title),
             success: function (res) {
+                console.log(res.data.list[0].url);
+                render(res.data.list[0].url)
+
                 var items = template("typeList", res);
                 $("#typeListBox").html(items)
                 $(".imgType_main >li .typeBox").click(function () {
@@ -83,6 +86,37 @@
             }
         })
     })
+
+    var MAX_HEIGHT = 200;
+    function render(src) {
+        var image = new Image();
+        image.onload = function() {
+            var canvas = document.createElement("canvas");
+            console.log(canvas);
+            if (image.height > MAX_HEIGHT && image.height >= image.width) {
+                // 宽度等比例缩放 *=
+                image.width *= MAX_HEIGHT / image.height;
+                image.height = MAX_HEIGHT;
+            }
+            if (image.width > MAX_HEIGHT && image.width > image.height) {
+                // 宽度等比例缩放 *=
+                image.height *= MAX_HEIGHT / image.width;
+                image.width = MAX_HEIGHT;
+            }
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            canvas.width = image.width;
+            canvas.height = image.height;
+            console.log(image);
+            console.log(canvas);
+            console.log(canvas.toDataURL());
+            // 将图像绘制到canvas上
+            ctx.drawImage(image, 0, 0, image.width, image.height);
+            var blob = canvas.toDataURL();
+            console.log(blob);
+        };
+        image.src = src;
+    };
 
     function getList(page) {
         $.ajax({
