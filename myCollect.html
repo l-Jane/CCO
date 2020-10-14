@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.lazyload.min.js"></script>
     <script src="./js/template-web.js"></script>
     <script src="./js/HappyImage.min.js"></script>
     <script src="./js/distpicker.data.js"></script>
@@ -39,7 +40,8 @@
         <li>
             <div class="typeBox" data-id="{{item.id}}">
                 <div class="imgBox">
-                    <img src="{{item.url}}" alt=""></div>
+                    <img class="lazy" data-original="{{item.url}}" alt="">
+                </div>
                 <p>{{item.name}}/{{item.sourceName}}/{{item.type}}</p>
             </div>
         </li>
@@ -47,7 +49,8 @@
         <li>
             <div class="typeBox" data-id="{{item.id}}">
                 <div class="imgBox">
-                    <img src="{{item.url}}" alt=""></div>
+                    <img class="lazy" data-original="{{item.url}}" alt="">
+                </div>
                 <p>{{item.name}}/{{item.sourceName}}/{{item.type}}</p>
             </div>
         </li>
@@ -55,7 +58,8 @@
         <li>
             <div class="typeBox" data-id="{{item.id}}">
                 <div class="imgBox">
-                    <img src="{{item.url}}" alt=""></div>
+                    <img class="lazy" data-original="{{item.url}}" alt="">
+                </div>
                 <p>{{item.name}}/{{item.sourceName}}/{{item.type}}</p>
             </div>
         </li>
@@ -84,6 +88,12 @@
                     }]
                 });
                 $("#collectBox").html(items)
+                // 懒加载
+                $("img.lazy").lazyload({
+                    placeholder : "image/loading.jpg",
+                    effect: "fadeIn",
+                    threshold: 200, // 提前开始加载
+                });
             }
         })
     })

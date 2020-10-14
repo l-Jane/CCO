@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.lazyload.min.js"></script>
     <script src="./js/template-web.js"></script>
     <script src="./js/HappyImage.min.js"></script>
     <script src="./js/distpicker.data.js"></script>
@@ -40,7 +41,8 @@
     <li>
         <div class="typeBox" data-id="{{value.id}}">
             <div class="imgBox">
-                <img src="{{value.url}}" alt=""></div>
+                <img class="lazy" data-original="{{value.url}}" alt="">
+            </div>
             <p>{{value.name}}/{{value.sourceName}}/{{value.type}}</p>
         </div>
     </li>
@@ -60,11 +62,18 @@
         $.ajax({
             url: "http://api.cc04u.cc/pic/sourcelist?pageSize=12&page=" + page + "&sourceName=" + decodeURI(title),
             success: function (res) {
-                console.log(res.data.list[0].url);
-                render(res.data.list[0].url)
+                // console.log(res.data.list[0].url);
+                // render(res.data.list[0].url)
 
                 var items = template("typeList", res);
                 $("#typeListBox").html(items)
+
+                // 懒加载
+                $("img.lazy").lazyload({
+                    placeholder : "image/loading.jpg",
+                    effect: "fadeIn",
+                    threshold: 200, // 提前开始加载
+                });
                 $(".imgType_main >li .typeBox").click(function () {
                     let id = $(this)[0].dataset.id
                     window.location.href = "./imgDetail.html?imgId=" + id
@@ -86,6 +95,29 @@
             }
         })
     })
+
+
+    function getList(page) {
+        $.ajax({
+            url: "http://api.cc04u.cc/pic/sourcelist?pageSize=12&page=" + page + "&sourceName=" + decodeURI(title),
+            success: function (res) {
+                var items = template("typeList", res);
+                $("#typeListBox").html(items)
+                $(".imgType_main >li .typeBox").click(function () {
+                    let id = $(this)[0].dataset.id
+                    window.location.href = "./imgDetail.html?imgId=" + id
+                })
+
+                // 懒加载
+                $("img.lazy").lazyload({
+                    placeholder : "image/loading.jpg",
+                    effect: "fadeIn",
+                    threshold: 200, // 提前开始加载
+                });
+            }
+        })
+    }
+
 
     var MAX_HEIGHT = 200;
     function render(src) {
@@ -117,20 +149,6 @@
         };
         image.src = src;
     };
-
-    function getList(page) {
-        $.ajax({
-            url: "http://api.cc04u.cc/pic/sourcelist?pageSize=12&page=" + page + "&sourceName=" + decodeURI(title),
-            success: function (res) {
-                var items = template("typeList", res);
-                $("#typeListBox").html(items)
-                $(".imgType_main >li .typeBox").click(function () {
-                    let id = $(this)[0].dataset.id
-                    window.location.href = "./imgDetail.html?imgId=" + id
-                })
-            }
-        })
-    }
 </script>
 </body>
 </html>

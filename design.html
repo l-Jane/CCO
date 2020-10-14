@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.lazyload.min.js"></script>
     <script src="./js/template-web.js"></script>
     <script src="./js/HappyImage.min.js"></script>
     <script src="./js/distpicker.data.js"></script>
@@ -41,7 +42,8 @@
     <li>
         <div class="typeBox" data-id="{{value.id}}">
             <div class="imgBox">
-                <img src="{{value.url}}" alt=""></div>
+                <img class="lazy" data-original="{{value.url}}" alt="">
+            </div>
             <p>{{value.name}}/{{value.sourceName}}/{{value.type}}</p>
         </div>
     </li>
@@ -64,6 +66,12 @@
                     let id = $(this)[0].dataset.id
                     window.location.href = "./imgDetail.html?imgId=" + id
                 })
+                // 懒加载
+                $("img.lazy").lazyload({
+                    placeholder : "image/loading.jpg",
+                    effect: "fadeIn",
+                    threshold: 200, // 提前开始加载
+                });
                 layui.use('laypage', function () {
                     var laypage = layui.laypage;
                     laypage.render({
@@ -84,7 +92,7 @@
 
     function getList(page) {
         $.ajax({
-            url: "http://api.cc04u.cc/pic/sourcelist?pageSize=12&page=" + page + "&sourceName=" + decodeURI(title),
+            url: "http://api.cc04u.cc/queryZplist?pageSize=12&page=" + page,
             success: function (res) {
                 var items = template("typeList", res);
                 $("#typeListBox").html(items)
@@ -92,6 +100,12 @@
                     let id = $(this)[0].dataset.id
                     window.location.href = "./imgDetail.html?imgId=" + id
                 })
+                // 懒加载
+                $("img.lazy").lazyload({
+                    placeholder : "image/loading.jpg",
+                    effect: "fadeIn",
+                    threshold: 200, // 提前开始加载
+                });
             }
         })
     }

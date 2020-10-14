@@ -112,7 +112,8 @@
 
                 $(".good").click(function () {
                     if (!userInfo) {
-                        layer.msg("请先登录");
+                        openPhoneLogin()
+                        // layer.msg("请先登录");
                         return
                     }
                     let type = $(this)[0].dataset.type
@@ -134,7 +135,8 @@
                 })
                 $(".collect").click(function () {
                     if (!userInfo) {
-                        layer.msg("请先登录");
+                        openPhoneLogin()
+                        // layer.msg("请先登录");
                         return
                     }
                     let type = $(this)[0].dataset.type
@@ -191,6 +193,9 @@
                     setTimeout(() => {
                         window.location.reload()
                     }, 800)
+                } else {
+                    openPhoneLogin()
+                    // layer.msg("请先登录");
                 }
             }
         })

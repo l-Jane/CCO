@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.lazyload.min.js"></script>
     <script src="./js/template-web.js"></script>
     <script src="./js/HappyImage.min.js"></script>
     <script src="./js/distpicker.data.js"></script>
@@ -41,7 +42,7 @@
         <div class="mask">
             <p>{{value.type}}</p>
         </div>
-        <img src="{{value.url}}" alt="">
+        <img class="lazy" data-original="{{value.url}}" alt="">
     </li>
     {{/each}}
     {{/if}}
@@ -64,6 +65,13 @@
                     let title = $(this)[0].dataset.type
                     window.location.href = "./typeDetail.html?title=" + encodeURI(title)
                 })
+
+                // 懒加载
+                $("img.lazy").lazyload({
+                    placeholder : "image/loading.jpg",
+                    effect: "fadeIn",
+                    threshold: 200, // 提前开始加载
+                });
 
                 // layui.use('laypage', function () {
                 //     var laypage = layui.laypage;
@@ -93,6 +101,13 @@
                     let title = $(this)[0].dataset.type
                     window.location.href = "./typeDetail.html?title=" + encodeURI(title)
                 })
+
+                // 懒加载
+                $("img.lazy").lazyload({
+                    placeholder : "image/loading.jpg",
+                    effect: "fadeIn",
+                    threshold: 200, // 提前开始加载
+                });
             }
         })
     }
