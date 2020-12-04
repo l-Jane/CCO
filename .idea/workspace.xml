@@ -13,6 +13,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="less File" />
       </list>
     </option>
   </component>
@@ -34,7 +35,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
@@ -49,6 +50,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/css" />
     </key>
@@ -87,7 +89,13 @@
       <workItem from="1602577065851" duration="103000" />
       <workItem from="1602577986139" duration="197000" />
       <workItem from="1602591491461" duration="3589000" />
-      <workItem from="1602641077552" duration="1119000" />
+      <workItem from="1602641077552" duration="1868000" />
+      <workItem from="1603462568361" duration="629000" />
+      <workItem from="1604299403522" duration="24000" />
+      <workItem from="1604414399377" duration="402000" />
+      <workItem from="1604976512753" duration="264000" />
+      <workItem from="1605102597416" duration="255000" />
+      <workItem from="1605343120551" duration="2452000" />
     </task>
     <servers />
   </component>
